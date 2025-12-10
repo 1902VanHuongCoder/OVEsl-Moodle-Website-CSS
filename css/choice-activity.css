@@ -1,0 +1,297 @@
+/*  ----------------------  */
+/* 1. KHUNG CHỨA CÁC TÙY CHỌN */
+form.horizontal {
+  margin-top: 15px !important;
+}
+
+form.horizontal .choices {
+  display: flex;
+  flex-wrap: wrap; /* Tự động xuống dòng nếu nhiều lựa chọn */
+  gap: 12px; /* Khoảng cách giữa các nút */
+  padding: 0;
+  margin: 0 0 24px 0; /* Khoảng cách dưới cùng */
+  list-style: none; /* Bỏ dấu chấm đầu dòng */
+}
+
+/* 2. ITEM LIST (THẺ LI) */
+form.horizontal .option {
+  margin: 0 !important; /* Reset margin mặc định của theme */
+  padding: 0;
+}
+
+/* 3. ẨN CHECKBOX MẶC ĐỊNH (Nhưng vẫn giữ logic hoạt động) */
+form.horizontal .option input[type="checkbox"] {
+  position: absolute;
+  opacity: 0; /* Làm trong suốt */
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* 4. STYLE CHO LABEL (BIẾN THÀNH NÚT BẤM) */
+form.horizontal .option label {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db; /* Viền xám mờ */
+  border-radius: 50px; /* Bo tròn hình viên thuốc */
+  font-size: 15px;
+  color: #4b5563;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  user-select: none; /* Chống bôi đen văn bản khi click nhanh */
+
+  /* Căn giữa chữ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 5. HIỆU ỨNG KHI DI CHUỘT (HOVER) */
+form.horizontal .option label:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+  transform: translateY(-1px); /* Nổi lên nhẹ */
+}
+
+/* 6. TRẠNG THÁI ĐÃ CHỌN (CHECKED) - QUAN TRỌNG NHẤT */
+/* Khi input được check, label đứng ngay sau nó sẽ đổi màu */
+form.horizontal .option input[type="checkbox"]:checked + label {
+  background-color: #e0f2fe; /* Nền xanh nhạt */
+  color: #1f5f73; /* Chữ xanh đậm (theo theme của bạn) */
+  border-color: #1f5f73; /* Viền xanh đậm */
+  box-shadow: 0 0 0 1px #1f5f73; /* Làm viền dày hơn một chút */
+  font-weight: 600;
+}
+
+/* 7. NÚT SAVE MY CHOICE */
+form.horizontal input[type="submit"].btn {
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  /* Giữ nguyên màu primary của theme hoặc custom thêm nếu muốn */
+  min-width: 150px;
+}
+
+form.horizontal a[class="ms-1"] {
+  margin-left: 10px !important;
+}
+
+/* CSS cho admin */
+/* =========================================================
+   MODERN CHOICE REPORT UI
+   ========================================================= */
+
+/* 1. TỔNG THỂ BẢNG (TABLE CONTAINER) */
+#attemptsform .table-responsive {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  overflow: hidden; /* Để bo góc hoạt động tốt */
+  margin-bottom: 20px;
+}
+
+/* 2. HEADER CỦA BẢNG (Tiêu đề các lựa chọn) */
+#attemptsform table.results thead th {
+  background-color: #f8f9fa; /* Màu nền xám nhẹ */
+  color: #1f5f73; /* Màu chủ đạo */
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid #e5e7eb;
+  padding: 15px;
+  vertical-align: top;
+}
+
+/* Style cho phần checkbox "Select all" trong header */
+#attemptsform table.results thead .form-check {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  opacity: 0.7; /* Làm mờ nhẹ để không tranh chấp với tiêu đề */
+}
+
+/* 3. DÒNG THỐNG KÊ SỐ LƯỢNG (Number of responses) */
+#attemptsform table.results tbody tr:first-child td {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1f5f73;
+  text-align: center;
+  padding: 15px;
+  background-color: #ffffff;
+}
+#attemptsform table.results tbody tr:first-child th {
+  vertical-align: middle;
+  color: #555;
+}
+
+/* 4. DÒNG DANH SÁCH NGƯỜI DÙNG (Users who chose...) */
+#attemptsform table.results tbody tr.lastrow td {
+  padding: 15px;
+  vertical-align: top;
+  background-color: #fff;
+}
+
+/* 5. TỪNG MỤC NGƯỜI DÙNG (User Item) */
+/* Đây là phần quan trọng nhất để làm đẹp danh sách */
+#attemptsform table.results .mb-1 {
+  display: flex;
+  align-items: center; /* Căn giữa avatar và tên theo chiều dọc */
+  padding: 8px 10px;
+  margin-bottom: 8px !important;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  border: 1px solid #f3f4f6;
+  transition: all 0.2s;
+}
+
+/* Hiệu ứng khi di chuột vào tên người dùng */
+#attemptsform table.results .mb-1:hover {
+  background-color: #e0f2fe;
+  border-color: #bae6fd;
+}
+
+/* Style cho Avatar và Initials */
+#attemptsform table.results .userpicture,
+#attemptsform table.results .userinitials {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; /* Bo tròn hoàn toàn avatar */
+  margin-right: 10px;
+  object-fit: cover;
+  margin-left: 5px; /* Tạo khoảng cách với checkbox */
+}
+
+/* Style cho Tên người dùng */
+#attemptsform table.results a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* 6. THANH CÔNG CỤ DƯỚI CÙNG (Select all / Action) */
+.responseaction {
+  background-color: #f1f5f9;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Đẩy nút Select và Dropdown ra 2 bên */
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Nút Select All */
+#select-all-responses {
+  background-color: #ffffff;
+  color: #555;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+#select-all-responses:hover {
+  background-color: #e5e7eb;
+  color: #000;
+}
+
+/* Dropdown "With selected..." */
+.responseaction select.form-select {
+  padding: 8px 30px 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  min-width: 250px;
+  cursor: pointer;
+}
+
+/* =========================================================
+   DOWNLOAD ACTION BAR STYLING
+   ========================================================= */
+
+/* 1. KHUNG CHỨA CÁC NÚT (Download Container) */
+.downloadreport.mt-1 {
+  margin-top: 20px !important;
+}
+
+.downloadreport.mt-1 .singlebutton {
+  margin-bottom: 0 !important;
+}
+
+.downloadreport {
+  /* Cách bảng bên trên một đoạn */
+  padding: 20px 20px; /* Tạo độ thoáng */
+  background-color: #ffffff; /* Nền trắng */
+  border: 1px solid #e5e7eb; /* Viền xám mờ */
+  /* Căn chỉnh vị trí */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Đẩy các nút sang phải (Gọn gàng hơn) */
+}
+
+/* Responsive: Trên mobile thì canh giữa */
+@media (max-width: 768px) {
+  .downloadreport {
+    justify-content: center;
+  }
+}
+
+/* 2. CẤU TRÚC LIST */
+.downloadreport ul.list-inline {
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px; /* Khoảng cách giữa các nút */
+}
+
+.downloadreport li.list-inline-item {
+  margin-right: 0 !important; /* Xóa margin mặc định của Bootstrap */
+}
+
+/* 3. STYLE CHO CÁC NÚT DOWNLOAD */
+/* Biến nút xám (btn-secondary) thành nút Outline hiện đại */
+.downloadreport .btn-secondary {
+  background-color: #ffffff; /* Nền trắng */
+  color: #4b5563; /* Chữ màu xám đậm */
+  border: 1px solid #d1d5db; /* Viền xám */
+
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px; /* Bo góc */
+  transition: all 0.2s ease-in-out;
+  min-width: 140px; /* Đảm bảo các nút to đều nhau */
+
+  /* Flex để căn chỉnh nếu sau này thêm icon */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 4. HIỆU ỨNG HOVER */
+.downloadreport .btn-secondary:hover {
+  background-color: #1f5f73; /* Đổi nền sang màu Xanh chủ đạo */
+  color: #ffffff; /* Chữ chuyển trắng */
+  border-color: #1f5f73;
+  transform: translateY(-2px); /* Nổi lên nhẹ */
+  box-shadow: 0 4px 10px rgba(31, 95, 115, 0.2); /* Bóng màu xanh */
+}
+
+/* 5. (TÙY CHỌN) THÊM ICON GIẢ LẬP BẰNG CSS */
+/* Thêm mũi tên tải xuống trước chữ để sinh động hơn */
+.downloadreport .btn-secondary::before {
+  content: "↓"; /* Ký tự mũi tên xuống */
+  font-weight: 800;
+  margin-right: 8px; /* Khoảng cách với chữ */
+  font-size: 16px;
+}
+
+/* Riêng nút Excel thì hover màu xanh lá (Optional) */
+/* Nếu bạn muốn phân biệt màu sắc từng loại file */
+/* .downloadreport button[id*="Excel"]:hover {
+    background-color: #10b981; 
+    border-color: #10b981;
+} 
+*/

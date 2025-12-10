@@ -1,0 +1,348 @@
+/*Thay đổi UI cho nút MORE FEATURE tại trang chủ khóa học*/
+.context-header-settings-menu {
+  background: var(--nice-color-white);
+  padding: 10px;
+  height: auto;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+  -moz-box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);
+  box-shadow: none;
+  border: 2px solid #0f766e;
+  color: #0f766e;
+}
+
+/* Hiển thị tiêu đề tại tất cả các trang */
+.page-title-area {
+  display: block !important;
+}
+
+/* Ẩn tiêu đề trang tại trang My Badges */
+#page-blocks-paulto_my_badges-view .page-title-area {
+  display: none !important;
+}
+
+/* Ẩn tiêu đề trang tại trang Site Home */
+#page-site-index .page-title-area {
+  display: none !important;
+}
+
+/* Ẩn tiêu đề trang tại trang My Courses */
+#page-blocks-ovesl_all_courses-mycourses .page-title-area {
+  display: none !important;
+}
+
+/*  Xóa padding cho feature button (nút 3 chấm) trong trang All course  */
+#page-course-index-category #page {
+  padding-bottom: 0px !important;
+}
+
+/*  */
+#page-filter-manage .buttons {
+  margin-top: 20px !important;
+}
+
+/* CSS cho trang danh sách diễn đàn */
+#page-mod-forum-view .tertiary-navigation .navitem {
+  align-items: center !important;
+}
+
+/* CSS Cho nút cài đặt chính tại trang danh sách diễn đàn trong 1 khóa học */
+#region-main-settings-menu > div {
+  border: 2px solid #1f5f73;
+  padding: 7px 13px;
+  border-radius: 8px;
+}
+
+.moodle-actionmenu {
+  display: flex !important;
+  justify-content: end !important;
+}
+
+ .moodle-actionmenu #action-menu-2-menubar {
+  border: 2px solid #4f5964; 
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+#page-mod-book-edit .moodle-actionmenu {
+  display: flex !important;
+  justify-content: end !important;
+}
+
+.moodle-actionmenu #action-menu-2-menubar {
+  border: 2px solid #4f5964; 
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+
+#page-mod-glossary-view .tertiary-navigation{ 
+  padding: 0px !important;
+}
+
+#page-mod-glossary-view .tertiary-navigation form {
+  gap: 10px !important;
+}
+
+#page-mod-glossary-view .tertiary-navigation form .ms-2 {
+  margin-left: 0px !important;
+}
+
+#page-course-view-topics .userprofile-info-container .nice-background-light-grey {
+  background: transparent !important;
+}
+
+#page-course-view-topics .userprofile-info-container .header-button-group {
+  gap: 10px !important;
+}
+
+#page-course-view-topics .userprofile-info-container .header-button-group a:nth-child(1) {
+   border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+}
+
+
+/* CSS cho phần chấm điểm assigement cho học sinh */
+[data-region="grading-navigation-panel"] [data-region="assignment-info"] a{
+   font-size: 13px !important;
+}
+
+[data-region="grading-navigation-panel"] [data-region="user-info"] a{
+   font-size: 16px !important;
+}
+
+[data-region="grading-navigation-panel"] [data-region="user-info"] img{
+   border-radius: 100% !important;
+}
+
+[data-region="grading-navigation-panel"] [data-region="user-selector"] [data-action="previous-user"], [data-region="grading-navigation-panel"] [data-region="user-selector"] [data-action="next-user"] {
+    font-size: 18px !important;
+    padding: 6px !important;
+}
+
+[data-region="grading-navigation-panel"] [data-region="user-selector"] [data-region="input-field"] .form-autocomplete-downarrow{
+    padding: 6px 0px !important;
+}
+
+
+
+/* --- 1. TỔNG THỂ KHUNG BÌNH LUẬN --- */
+.assignsubmission_comments .commentscontainer {
+    background-color: #f9fafb; /* Nền xám nhạt */
+    border-radius: 12px;
+    padding: 15px;
+    border: 1px solid #e5e7eb;
+    margin-top: 15px;
+}
+
+/* Link mở rộng "Comments (2)" */
+.assignsubmission_comments .comment-link {
+    font-weight: 700;
+    color: #374151;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+/* --- 2. DANH SÁCH BÌNH LUẬN (CHAT BUBBLES) --- */
+.assignsubmission_comments .comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.assignsubmission_comments .comment-list li {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.assignsubmission_comments .comment-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* --- 3. HEADER CỦA BÌNH LUẬN (Avatar + Tên + Giờ) --- */
+.comment-message-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 8px;
+}
+
+/* Ảnh đại diện (Avatar) */
+.comment-message-meta .picture img,
+.comment-message-meta .userinitials {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    margin-right: 10px;
+    border: 2px solid #e5e7eb;
+}
+
+/* Tên người dùng */
+.comment-message-meta .user a {
+    font-weight: 700;
+    color: #111827;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+/* Thời gian gửi */
+.comment-message-meta .time {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-left: auto; /* Đẩy giờ sang sát bên phải */
+}
+
+/* --- 4. NỘI DUNG BÌNH LUẬN --- */
+.comment-message .text {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+    padding-left: 42px; /* Thụt vào thẳng hàng với tên (bỏ qua avatar) */
+}
+
+/* Nút xóa bình luận (Thùng rác) */
+.comment-delete {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+.comment-delete:hover {
+    opacity: 1;
+}
+.comment-delete a {
+    color: #ef4444; /* Màu đỏ */
+}
+
+/* --- 5. KHUNG NHẬP BÌNH LUẬN MỚI --- */
+.comment-area {
+    margin-top: 15px;
+    border-top: 2px dashed #e5e7eb;
+    padding-top: 15px;
+}
+
+/* Textarea input */
+.comment-area textarea {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.95rem;
+    resize: vertical;
+    min-height: 60px;
+    transition: border-color 0.2s;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.comment-area textarea:focus {
+    border-color: #0f6cbf;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(15, 108, 191, 0.1);
+}
+
+/* --- 6. NÚT LƯU & HỦY (Biến link thành button) --- */
+.comment-area .fd {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end; /* Đẩy nút sang phải */
+    align-items: center;
+    gap: 10px;
+}
+
+/* Ẩn dấu gạch đứng "|" giữa 2 link */
+.comment-area .fd span {
+    display: none;
+}
+
+/* Nút Cancel */
+.comment-area .fd a[id^="comment-action-cancel"] {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+.comment-area .fd a[id^="comment-action-cancel"]:hover {
+    background-color: #f3f4f6;
+    color: #111;
+}
+
+/* Nút Save comment (Biến thành nút xanh nổi bật) */
+.comment-area .fd a[id^="comment-action-post"] {
+    background-color: #0f6cbf;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    border-radius: 20px; /* Bo tròn kiểu nút gửi tin nhắn */
+    box-shadow: 0 2px 4px rgba(15, 108, 191, 0.3);
+    transition: all 0.2s;
+}
+
+.comment-area .fd a[id^="comment-action-post"]:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(15, 108, 191, 0.4);
+}
+
+
+.assignsubmission.assignsubmission_comments {
+    display: block !important;
+}
+
+.gradingform .gradeform.mform .ftoggler { 
+  width: 100% !important;
+
+} 
+
+.gradingform .gradeform.mform .ftoggler h3 {
+    border-radius: 6px !important;
+    padding: 8px !important;
+    margin-bottom: 10px !important;
+    width: 100% !important;
+    background: #f5f6f7 !important; 
+}
+
+.assignsubmission_comments .comment-link[role="button"] {
+  margin-bottom: 0px !important;
+}
+
+.path-mod-assign [data-region="grade-panel"] .mform #fitem_id_grade.fitem {
+   padding-top: 20px !important;
+}
+
+
+/* CSS cho trang course overrides của admin*/
+#page-mod-assign-overrides .tertiary-navigation .navitem .singlebutton{ 
+  margin-bottom: 0px !important;
+}
+
+
+/* CSS cho trang Page view (Page activity) */
+#page-mod-page-view .nice-main .modified {
+  padding: 20px 0px!important;
+}
+
+
+/* CSS cho trang Quiz view */
+#page-mod-quiz-view .tertiary-navigation .navitem .singlebutton{
+  margin-bottom: 0px !important;
+}

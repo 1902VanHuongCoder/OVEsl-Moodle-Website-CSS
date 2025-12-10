@@ -1,0 +1,206 @@
+/* 1. KHUNG BAO NGOÀI */
+.entrybox {
+    /* MẤU CHỐT: Đặt font-size bằng 0 để ẩn hoàn toàn các dấu gạch đứng '|' */
+    font-size: 0; 
+    text-align: left; /* Canh lề trái (hoặc center nếu muốn canh giữa) */
+    line-height: normal;
+}
+
+/* 2. KHÔI PHỤC DÒNG HƯỚNG DẪN */
+.glossaryexplain {
+    font-size: 14px; /* Trả lại kích thước chữ cho dòng tiêu đề */
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+}
+
+/* 3. STYLE CHO CÁC NÚT (Nhỏ gọn hơn) */
+.entrybox a, 
+.entrybox b {
+    display: inline-block;
+    font-size: 13px;       /* Trả lại kích thước chữ cho nút (nhỏ hơn trước) */
+    padding: 3px 8px;      /* Giảm padding để nút bé lại */
+    margin: 2px;           /* Giảm khoảng cách giữa các nút */
+    border-radius: 4px;    /* Bo góc nhẹ */
+    text-decoration: none;
+    transition: all 0.2s;
+    
+    /* Màu sắc mặc định (xám nhạt) */
+    background-color: #f3f4f6; 
+    border: 1px solid #d1d5db; 
+    color: #374151; 
+}
+
+/* 4. HIỆU ỨNG HOVER */
+.entrybox a:hover {
+    background-color: #e5e7eb;
+    border-color: #9ca3af;
+    color: #111;
+}
+
+/* 5. NÚT ĐANG ĐƯỢC CHỌN (ALL hoặc ký tự hiện tại) */
+.entrybox b {
+    background-color: #1F5F73; /* Màu xanh dương đậm */
+    color: #ffffff;
+    border-color: #1F5F73;
+    cursor: default;
+}
+
+
+/* 1. Thiết lập khung bảng chứa tiêu đề */
+table.glossarycategoryheader {
+    width: 100%;
+    margin-top: 40px;      /* Tạo khoảng cách lớn với nội dung phía trên */
+    margin-bottom: 20px;   /* Khoảng cách với nội dung phía dưới */
+    border-bottom: 1px solid #e5e7eb; /* Đường kẻ mờ chạy dài hết chiều ngang */
+    border-collapse: collapse;
+}
+
+/* 2. Xóa các style mặc định của ô bảng */
+table.glossarycategoryheader th {
+    padding: 0;
+    border: none;
+    text-align: left;      /* Canh trái chữ cái */
+}
+
+/* 3. Style cho chữ cái (H3) */
+table.glossarycategoryheader h3 {
+    display: inline-block; /* Để border dưới chỉ dài bằng chữ cái */
+    font-size: 28px;       /* Kích thước chữ lớn, rõ ràng */
+    font-weight: 700;      /* In đậm */
+    color: #1F5F73;        /* Màu xanh dương (đồng bộ với nút bấm ở trên) */
+    margin: 0;
+    padding-bottom: 8px;   /* Khoảng cách giữa chữ và đường kẻ */
+    
+    /* Tạo điểm nhấn: Đường kẻ đậm ngay dưới chữ cái */
+    border-bottom: 3px solid #1F5F73; 
+    margin-bottom: -2px;   /* Kỹ thuật đẩy đường kẻ đậm đè lên đường kẻ mờ của bảng */
+}
+
+/* 3. Style cho chữ cái (H3) - Đã sửa lỗi dính border */
+table.glossarycategoryheader h3 {
+    display: inline-block; /* Bắt buộc để padding có tác dụng */
+    font-size: 28px;
+    font-weight: 700;
+    color: #1F5F73;
+    margin: 0;
+    line-height: 1.2;      /* Đảm bảo dòng chữ đủ cao */
+    
+    /* --- PHẦN QUAN TRỌNG ĐỂ TẠO KHOẢNG CÁCH --- */
+    padding-bottom: 15px;  /* Tăng khoảng cách từ chân chữ xuống đường kẻ đậm */
+    padding-top: 5px;      /* Thêm chút khoảng trên cho cân đối (tuỳ chọn) */
+    /* ------------------------------------------ */
+    
+    /* Đường kẻ đậm màu xanh */
+    border-bottom: 3px solid #1F5F73; 
+    
+    /* Đẩy đường kẻ đậm xuống để đè lên đường kẻ mờ của bảng */
+    margin-bottom: -2px;   
+    position: relative;    /* Giúp xử lý hiển thị tốt hơn trên một số trình duyệt */
+    z-index: 1;            /* Đảm bảo đường kẻ đậm nằm đè lên đường kẻ mờ */
+}
+
+#page-mod-glossary-view table.glossarycategoryheader {
+    margin-bottom: 20px !important;
+    margin-top: 30px !important;
+}
+
+
+#page-mod-glossary-view .no-overflow p {
+  margin-top: 0px !important;
+}
+
+/* =========================================
+   GLOSSARY CARD STYLE - FINAL FIX
+   ========================================= */
+
+/* 1. KHUNG BAO NGOÀI (CARD CONTAINER) */
+table.glossarypost {
+    display: block;             /* Biến bảng thành khối div */
+    width: 100%;                /* Chiều rộng tối đa */
+    margin-bottom: 24px;        /* TẠO GAP: Khoảng cách giữa các card */
+    
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    
+    /* Reset thuộc tính bảng để tránh lỗi giao diện */
+    border-spacing: 0;
+    border-collapse: separate;
+    overflow: hidden; 
+}
+
+/* 2. ÉP CÁC PHẦN TỬ BÊN TRONG FULL WIDTH (Fix lỗi co cụm) */
+table.glossarypost tbody,
+table.glossarypost tr {
+    display: block;
+    width: 100%;
+}
+
+/* 3. PHẦN NỘI DUNG CHÍNH (BODY) */
+table.glossarypost td.entry {
+    display: block;             /* Quan trọng: hiển thị dạng khối */
+    width: 100%;                /* Full chiều rộng */
+    box-sizing: border-box;     /* Tính cả padding vào độ rộng để không bị vỡ */
+    padding: 24px 24px 10px 24px;
+}
+
+/* 4. PHẦN THANH CÔNG CỤ (FOOTER - Edit/Delete) */
+table.glossarypost td.entrylowersection {
+    display: block;             /* Quan trọng: hiển thị dạng khối */
+    width: 100%;                /* FIX LỖI CO LẠI: Bắt buộc full chiều rộng */
+    box-sizing: border-box;     /* Đảm bảo padding không làm vỡ khung */
+    
+    background-color: #f9fafb;
+    padding: 12px 24px;
+    border-top: 1px solid #f3f4f6;
+    text-align: right;          /* Đẩy icon sang phải */
+}
+
+/* --- CÁC STYLE TRANG TRÍ BÊN TRONG (GIỮ NGUYÊN) --- */
+
+/* Tiêu đề (Concept) */
+.glossarypost .concept h4 {
+    color: #1F5F73;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+    border: none;
+}
+
+/* Nội dung mô tả */
+.glossarypost .no-overflow p {
+    color: #4b5563;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Style cho Icons */
+table.glossarypost .commands .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    border-radius: 6px;
+    color: #6b7280;
+    transition: all 0.2s;
+}
+
+table.glossarypost .commands .icon:hover {
+    background-color: #e0f2fe;
+    color: #1F5F73;
+}
+
+/* Ẩn đường kẻ thừa của Moodle */
+table.glossarypost hr {
+    display: none;
+}
+
+.path-mod-glossary .glossarypost {
+    margin-bottom: 10px !important;
+}

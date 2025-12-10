@@ -1,0 +1,11 @@
+.nice-dashboard-container .collapsible-actions { 
+  margin-bottom: 25px !important; 
+  width: 100% !important; 
+  background: none !important; 
+  padding: .375rem 0rem !important;
+}
+
+.nice-dashboard-container .collapsible-actions a {
+padding: 5px 10px !important; 
+background: var(--nice-color-grey) !important; 
+} 

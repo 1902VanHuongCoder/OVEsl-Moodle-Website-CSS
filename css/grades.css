@@ -1,0 +1,241 @@
+/* =========================================
+   1. CẤU HÌNH VÙNG CHỨA & THANH CUỘN
+   ========================================= */
+/* Tạo vùng cuộn ngang cho bảng */
+.gradeparent {
+    max-width: 100%;
+    overflow-x: auto;       /* Hiện thanh cuộn khi bảng quá lớn */
+    display: block;
+    min-height: 250px !important; /* Chiều cao tối thiểu để dễ thao tác */
+    -webkit-overflow-scrolling: touch; /* Mượt mà trên cảm ứng */
+}
+
+/* Tùy chỉnh giao diện thanh cuộn (Scrollbar) */
+.gradeparent::-webkit-scrollbar {
+    height: 8px;
+}
+.gradeparent::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+.gradeparent::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 4px;
+}
+.gradeparent::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* =========================================
+   2. CĂN CHỈNH NỘI DUNG TRONG Ô ĐIỂM SỐ
+   ========================================= */
+
+/* Ép Điểm số, Dấu *, Menu 3 chấm nằm trên 1 hàng ngang */
+.gradereport-grader-table td.grade_type_value .d-flex.flex-column {
+    flex-direction: row !important;         /* Xếp ngang */
+    align-items: center !important;         /* Canh giữa dọc */
+    justify-content: flex-start !important; /* Canh trái */
+    flex-wrap: nowrap !important;           /* Không xuống dòng */
+    width: auto !important;
+}
+
+/* Tinh chỉnh khoảng cách giữa số điểm và các icon bên cạnh */
+.gradereport-grader-table td.grade_type_value .d-flex.flex-column > div {
+    width: auto !important;
+    margin-right: 5px;       /* Cách ra 5px */
+    margin-bottom: 0 !important;
+}
+
+/* =========================================
+   3. TÙY CHỈNH KHOẢNG CÁCH TRONG TIÊU ĐỀ (HEADER)
+   ========================================= */
+
+/* Đẩy nút 3 chấm (Action menu) trong header cách ra 4px */
+.gradereport-grader-table th .action-menu,
+.gradereport-grader-table th .moodle-actionmenu {
+    margin-left: 4px !important;
+    display: inline-block;
+}
+
+/* Đẩy biểu tượng sắp xếp (Sort icon) trong header cách ra 4px */
+.gradereport-grader-table th .sorticon,
+.gradereport-grader-table th img.icon[src*="sort"],
+.gradereport-grader-table th a.sortlink {
+    margin-left: 4px !important;
+    vertical-align: middle;
+}
+
+/* =========================================
+   4. CẤU TRÚC BẢNG (RESET STICKY & FLOATING)
+   ========================================= */
+
+/* Xử lý hàng "Overall average" (Trung bình toàn khóa) */
+/* Đưa hàng này về vị trí bình thường trong bảng, KHÔNG trôi nổi dưới đáy màn hình */
+.gradereport-grader-table tr.lastrow,
+.gradereport-grader-table tr.avg {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: auto !important;
+    display: table-row !important; /* Bắt buộc hiển thị dạng hàng bảng */
+}
+
+/* --- TẮT TOÀN BỘ TÍNH NĂNG STICKY (CỐ ĐỊNH) --- */
+/* Áp dụng cho cột tên (c0), ô tiêu đề và hàng trung bình */
+
+.gradereport-grader-table th.c0,        /* Tiêu đề cột tên */
+.gradereport-grader-table td.c0,        /* Các ô tên sinh viên */
+.gradereport-grader-table .cell.c0,
+.gradereport-grader-table tr.avg th.c0, /* Ô tiêu đề hàng Average */
+.gradereport-grader-table tr.lastrow th.c0 {
+    position: static !important;    /* Trả về vị trí tĩnh mặc định */
+    left: auto !important;          /* Hủy bỏ vị trí bên trái */
+    box-shadow: none !important;    /* Bỏ bóng đổ */
+    z-index: auto !important;
+    background-color: transparent !important; /* Bỏ màu nền che khuất */
+    border-right: 1px solid #dee2e6; /* Giữ lại đường kẻ ngăn cách cho dễ nhìn */
+}
+
+/* Chọn hàng đầu tiên trong bảng điểm và tô màu các ô tiêu đề bên trong */
+#user-grades tbody tr:first-child th {
+    background-color: #d1ecf1 !important; /* Màu xanh nhạt */
+    color: #0c5460; /* Màu chữ (tùy chọn) */
+}
+
+/* =========================================
+   SIMPLE COMPACT STICKY FOOTER (FIXED ARROW)
+   ========================================= */
+
+/* 1. Khung chân trang chính */
+#sticky-footer {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 50px !important; /* Chiều cao cố định nhỏ gọn */
+    background-color: #fff !important;
+    border-top: 1px solid #e0e0e0 !important;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.03) !important;
+    z-index: 1000 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important; /* Căn giữa */
+}
+
+/* 2. Xử lý layout bên trong */
+.sticky-footer-content-wrapper,
+.sticky-footer-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important; 
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: auto !important;
+    gap: 10px !important;
+}
+
+/* 3. Ẩn các cột rác của Moodle */
+.sticky-footer-content .col, 
+.sticky-footer-content .col-md-4 { display: none !important; }
+.sticky-footer-content .col-auto { width: auto !important; padding: 0 !important; }
+
+/* 4. Chữ "Show" */
+#sticky-footer label {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    color: #666 !important;
+    font-weight: 500 !important;
+}
+
+/* 5. Ô chọn (Select Box) - ĐÃ SỬA LỖI ĐÈ CHỮ */
+#sticky-footer select {
+    height: 30px !important;
+    padding-left: 10px !important;
+    /* QUAN TRỌNG: Tăng padding phải lên 30px để dành chỗ cho mũi tên */
+    padding-right: 30px !important; 
+    margin-left: 8px !important;
+    font-size: 13px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    background-color: #fff !important;
+    cursor: pointer !important;
+    line-height: 1 !important;
+    
+    /* Xóa mũi tên mặc định xấu xí của trình duyệt */
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    
+    /* Thêm mũi tên tùy chỉnh nhỏ gọn */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 8px center !important;
+    background-size: 12px !important;
+}
+
+/* Hiệu ứng hover */
+#sticky-footer select:hover {
+    border-color: #1F5F73 !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231F5F73' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+}
+
+
+
+/* CSS phần Grades cho User bình thường */
+
+.tertiary-navigation.full-width-bottom-border {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    border-bottom:none !important;
+    padding: 0px;
+    width: 100% !important;
+}
+
+.nice-main .user-heading.d-flex {
+    display: none!important;
+} 
+
+.tertiary-navigation .tertiary-navigation-selector .dropdown-toggle {
+    padding: 0;
+    font-size: 1rem!important;
+    font-weight: normal!important;
+    border: 1px solid #082D47 !important;
+    color: #082D47 !important;
+    background: none !important;
+    padding: 3px 10px !important;
+}
+
+.tertiary-navigation.full-width-bottom-border .d-flex {
+    justify-content: end;
+    gap: 10px;
+    font-weight: normal!important;
+} 
+
+.tertiary-navigation.full-width-bottom-border .d-flex .btn.show{
+    border-color: transparent !important;
+}
+
+
+.tertiary-navigation.full-width-bottom-border .navitem-divider {
+   display: none;
+}
+
+.tertiary-navigation .navitem:not(:last-child){
+    margin-right: 10px!important;
+}
+
+.tertiary-navigation .navitem.d-flex.flex-column.align-self-center {
+     background: #ffffff !important;
+    padding: 3px 8px;
+    border: 1px solid #082c45;
+    border-radius: 5px;
+}
+
+
+

@@ -1,0 +1,22 @@
+ .breadcrumb_widgets {
+    height: fit-content !important;
+    padding: 20px 20px 0px 20px !important;
+}
+
+.breadcrumb_widgets h2 {
+    float: none !important;
+    padding-left: 0px !important;
+}
+
+.breadcrumb_widgets  ol {
+    float: none !important;
+    transform: none !important;
+}
+
+#page-course-completion .tertiary-navigation {
+    border-bottom: none !important;
+}
+#page-course-completion .tertiary-navigation div.d-flex {
+    justify-content: end !important;
+    gap: 10px !important;
+}

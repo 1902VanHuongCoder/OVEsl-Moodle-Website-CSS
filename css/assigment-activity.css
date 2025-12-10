@@ -1,0 +1,439 @@
+/* =========================================================
+   MODERN SUBMISSION TOOLBAR
+   ========================================================= */
+
+/* 1. KHUNG CHỨA TỔNG THỂ (Main Container) */
+.tertiary-navigation {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;       /* Bo tròn toàn bộ thanh */
+    padding: 12px 20px !important;
+    margin-bottom: 24px !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02); /* Đổ bóng nhẹ */
+}
+
+/* 2. CĂN CHỈNH LAYOUT (Flexbox) */
+.tertiary-navigation > .d-flex {
+    align-items: center;       /* Căn giữa theo chiều dọc */
+    gap: 16px;                 /* Khoảng cách đều giữa các phần tử */
+    flex-wrap: wrap;           /* Tự xuống dòng trên mobile */
+}
+
+/* 3. TIÊU ĐỀ "Submissions" */
+.tertiary-navigation h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1F5F73;            /* Màu chủ đạo */
+    margin: 0;
+    padding-right: 10px;
+}
+
+/* 4. ẨN ĐƯỜNG KẺ DỌC CŨ (Divider) */
+/* Xóa các vạch ngăn cách cũ kỹ để giao diện thoáng hơn */
+.tertiary-navigation .navitem-divider {
+    display: none !important;
+}
+
+/* 5. Ô TÌM KIẾM (Search Input) */
+.tertiary-navigation .simplesearchform .form-control {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #f9fafb; /* Nền xám nhẹ để phân biệt với dropdown */
+    min-width: 250px;          /* Đảm bảo ô tìm kiếm đủ rộng */
+    transition: all 0.2s;
+}
+
+.tertiary-navigation .simplesearchform .form-control:focus {
+    background-color: #fff;
+    border-color: #1F5F73;
+    box-shadow: 0 0 0 3px rgba(31, 95, 115, 0.1);
+}
+
+/* 6. CÁC NÚT DROPDOWN (Filter by name, Status, Advanced) */
+/* Biến đổi các text link thành các nút bấm dạng hộp (Input-like) */
+.tertiary-navigation .dropdown-toggle {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px 16px !important; /* Force padding */
+    background-color: #ffffff;
+    color: #374151;
+    font-size: 14px;
+    min-height: 40px;             /* Chiều cao đồng bộ với ô search */
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+/* Hiệu ứng Hover cho Dropdown */
+.tertiary-navigation .dropdown-toggle:hover {
+    border-color: #1F5F73;
+    background-color: #f0f9ff;
+    color: #1F5F73;
+}
+
+/* Style cho Label nhỏ bên trong Dropdown (VD: chữ "Status") */
+.tertiary-navigation .dropdown-toggle .small {
+    color: #6b7280;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: 6px !important;
+    letter-spacing: 0.5px;
+}
+
+/* Style cho Giá trị đang chọn (VD: "All") */
+.tertiary-navigation .dropdown-toggle .fw-bold {
+    color: #111;
+    font-weight: 600 !important;
+}
+
+/* 7. NÚT GRADE (Nút hành động chính) */
+.tertiary-navigation .navitem.ms-sm-auto .btn-primary {
+    background-color: #1F5F73;
+    border: none;
+    padding: 10px 24px;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(31, 95, 115, 0.3);
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.tertiary-navigation .navitem.ms-sm-auto .btn-primary:hover {
+    background-color: #164e63;
+    transform: translateY(-1px);
+}
+
+/* 8. RESPONSIVE (Cho màn hình nhỏ) */
+@media (max-width: 768px) {
+    .tertiary-navigation > .d-flex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .tertiary-navigation .navitem.ms-sm-auto {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .tertiary-navigation .navitem.ms-sm-auto .btn-primary {
+        width: 100%;
+    }
+}
+
+.tertiary-navigation .navitem.d-flex.flex-column.align-self-center {
+    border:none !important;
+}
+
+/* =========================================================
+   GRADING ACTION TOOLBAR STYLING
+   ========================================================= */
+
+/* 1. KHUNG CHỨA (TOOLBAR CONTAINER) */
+/* Override class pt-0 mặc định của Moodle để tạo padding đều */
+.tertiary-navigation.pt-0 {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px 20px !important; /* Padding đều 4 phía */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    margin-top: 20px !important;
+    
+    /* Đảm bảo chiều cao vừa phải */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Đẩy mọi thứ sang phải */
+}
+
+/* Reset margin cho flex container bên trong */
+.tertiary-navigation .d-flex.pb-2 {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    align-items: center;
+    gap: 16px; /* Khoảng cách giữa Checkbox và nút Action */
+}
+
+/* 2. ẨN DIVIDER THỪA */
+.tertiary-navigation .navitem-divider {
+    display: none !important;
+}
+
+/* 3. QUICK GRADING CHECKBOX */
+.tertiary-navigation .form-check {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: #f9fafb; /* Nền xám nhẹ làm nổi bật khu vực switch */
+    padding: 6px 12px;
+    border-radius: 20px;       /* Bo tròn hình viên thuốc */
+    border: 1px solid #f3f4f6;
+    transition: all 0.2s;
+}
+
+/* Hiệu ứng khi hover vào cụm checkbox */
+.tertiary-navigation .form-check:hover {
+    background-color: #f0f9ff;
+    border-color: #e0f2fe;
+}
+
+/* Style ô vuông checkbox */
+.tertiary-navigation .form-check-input {
+    width: 18px;
+    height: 18px;
+    margin-top: 0;
+    margin-right: 8px;
+    cursor: pointer;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+}
+
+/* Khi được check */
+.tertiary-navigation .form-check-input:checked {
+    background-color: #1F5F73;
+    border-color: #1F5F73;
+}
+
+/* Style nhãn chữ "Quick grading" */
+.tertiary-navigation .form-check-label {
+    font-weight: 600;
+    font-size: 13px;
+    color: #4b5563;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 4. ACTIONS BUTTON (DROPDOWN) */
+/* Reset style nút mặc định */
+.tertiary-navigation .btn-outline-primary {
+    color: #1F5F73;            /* Chữ xanh chủ đạo */
+    border: 1px solid #d1d5db; /* Viền xám mờ (trông sang hơn viền xanh mặc định) */
+    background-color: #fff;
+    
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s;
+    height: 38px;              /* Cân bằng chiều cao với checkbox */
+}
+
+/* Hiệu ứng Hover nút Actions */
+.tertiary-navigation .btn-outline-primary:hover,
+.tertiary-navigation .btn-outline-primary:focus {
+    background-color: #1F5F73;
+    border-color: #1F5F73;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(31, 95, 115, 0.2);
+}
+
+/* Chỉnh mũi tên (Caret) trong nút */
+.tertiary-navigation .caret {
+    margin-left: 8px;
+    border-top-color: currentColor; /* Tự đổi màu theo màu chữ */
+}
+
+/* Dropdown Menu bên trong */
+.tertiary-navigation .dropdown-menu {
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 6px;
+    margin-top: 8px !important;
+}
+
+.tertiary-navigation .dropdown-item {
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.tertiary-navigation .dropdown-item:hover {
+    background-color: #f3f4f6;
+    color: #1F5F73;
+}
+
+#page-mod-assign-grading .tertiary-navigation.full-width-bottom-border {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+/* =========================================================
+   MOODLE TABLE: FINAL CLEAN UI & MINIMAL SCROLL
+   ========================================================= */
+
+/* 1. KHÓA CHẶT CONTAINER GỐC (.gradingtable) */
+.gradingtable-wrapper {
+    overflow-x: hidden !important; /* Ẩn scroll của wrapper ngoài cùng nếu có */
+    width: 100% !important;
+}
+
+.gradingtable {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    
+    /* Reset style mặc định */
+    box-sizing: border-box !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* 2. CẤU HÌNH KHUNG CUỘN (WRAPPER - DO JS TẠO) */
+.gradingtable-wrapper {
+    display: block !important;
+    width: 100% !important;
+    height: auto;
+    max-height: 75vh;
+    
+    /* Kích hoạt cuộn nội bộ */
+    overflow: auto !important;
+    
+    /* Style khung viền nhẹ nhàng hơn */
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+/* =========================================================
+   3. STYLE THANH CUỘN (SCROLLBAR) - GỌN & KHÔNG MŨI TÊN
+   ========================================================= */
+
+/* Kích thước siêu nhỏ (6px) */
+.gradingtable-wrapper::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+}
+
+/* Ẩn hoàn toàn 2 nút mũi tên ở đầu */
+.gradingtable-wrapper::-webkit-scrollbar-button {
+    display: none !important;
+}
+
+/* Rãnh trượt trong suốt */
+.gradingtable-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Tay cầm (Thumb) bo tròn và tinh tế */
+.gradingtable-wrapper::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1; /* Màu xám nhạt */
+    border-radius: 10px;       /* Bo tròn */
+    border: 1px solid transparent; /* Viền trong suốt giúp thumb tách biệt */
+    background-clip: content-box;
+}
+
+/* Hover vào thanh cuộn thì đậm lên chút */
+.gradingtable-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+}
+
+/* =========================================================
+   4. CẤU HÌNH BẢNG & HEADER
+   ========================================================= */
+
+#submissions.table {
+    width: max-content !important; 
+    min-width: 100%;
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* 5. CỐ ĐỊNH HEADER (STICKY TOP) - STYLE GỌN GÀNG */
+#submissions thead th {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100;
+    
+    /* Màu nền sáng sủa hơn */
+    background-color: #f8fafc; 
+    
+    /* Typography gọn gàng */
+    color: #475569;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;       /* Chữ nhỏ hơn 1 chút */
+    letter-spacing: 0.5px; /* Thoáng chữ */
+    height: 45px;          /* Chiều cao nhỏ gọn */
+    padding: 0 16px;
+    
+    /* Viền mảnh 1px thay vì 2px */
+    border-bottom: 1px solid #cbd5e1; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+/* 6. CỐ ĐỊNH CỘT TRÁI (CHECKBOX .c0) */
+#submissions .c0 {
+    position: sticky !important;
+    left: 0;
+    z-index: 110;
+    width: 45px;
+    min-width: 45px;
+    background-color: #fff;
+    border-right: 1px solid #f1f5f9;
+}
+
+/* 7. CỐ ĐỊNH CỘT TÊN (.c1) */
+#submissions .c1 {
+    position: sticky !important;
+    left: 45px;
+    z-index: 110;
+    min-width: 250px;
+    background-color: #fff;
+    border-right: 1px solid #e2e8f0; /* Viền đậm hơn chút để phân cách */
+    box-shadow: 2px 0 4px -2px rgba(0,0,0,0.05); /* Bóng đổ nhẹ bên phải cột tên */
+}
+
+/* 8. GIAO ĐIỂM GÓC CHẾT (HEADER CỘT CỐ ĐỊNH) */
+#submissions thead th.c0,
+#submissions thead th.c1 {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 120;
+    background-color: #f8fafc; /* Trùng màu header */
+    border-bottom: 1px solid #cbd5e1;
+}
+#submissions thead th.c1 {
+    left: 45px !important;
+}
+
+/* 9. TINH CHỈNH Ô DỮ LIỆU */
+#submissions td {
+    vertical-align: middle;
+    padding: 10px 16px; /* Giảm padding dọc cho gọn */
+    white-space: nowrap;
+    border-top: none;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    font-size: 13px;
+}
+#submissions tbody tr:hover td {
+    background-color: #f1f5f9; /* Màu hover nhẹ nhàng */
+}
+
+/* Ẩn header ảo của Moodle */
+.gradingtable .sticky-header, 
+.gradingtable .floating-header { display: none !important; }
+
+/* FIX AN TOÀN BODY */
+body {
+    overflow-x: hidden;
+}
+
+.path-mod-assign .gradingtable thead tr {
+    position: relative !important;
+    top: 0px !important;
+}
+

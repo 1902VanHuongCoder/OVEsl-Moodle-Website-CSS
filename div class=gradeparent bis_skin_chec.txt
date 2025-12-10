@@ -1,0 +1,286 @@
+<ul class="slots only-one-section" role="presentation" id="yui_3_18_1_1_1765353722641_393"><li id="section-27" class="section main clearfix" role="presentation" data-sectionname="Untitled section"><div class="content" bis_skin_checked="1" id="yui_3_18_1_1_1765353722641_392"><div class="section-heading" bis_skin_checked="1"><div class="instancesectioncontainer" bis_skin_checked="1"><h3 class="main page-section-title-hide">Untitled section</h3><a class="editing_section" data-action="edit_section_title" role="button" href="#"><i class="icon fa fa-pen fa-fw editicon visibleifjs" title="Edit heading 'Untitled section'" role="img" aria-label="Edit heading 'Untitled section'"></i></a></div><span class="instanceshufflequestions" data-action="shuffle_questions"><span class="shuffle-progress"></span><input type="checkbox" id="shuffle-27" value="1" data-action="shuffle_questions" class="cm-edit-action"><label for="shuffle-27">Shuffle</label> <span class="shuffle-help-tip"><a class="btn btn-link p-0 me-2 icon-no-margin" role="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="&lt;div class=&quot;no-overflow&quot;&gt;&lt;p&gt;If enabled, every time the quiz is attempted, the order of the questions in this section will be shuffled into a different random order.&lt;/p&gt;
+
+&lt;p&gt;This can make it harder for students to share answers, but it also makes it harder for students to discuss a particular question with the teacher.&lt;/p&gt;
+&lt;/div&gt; " data-bs-html="true" tabindex="0" data-bs-trigger="focus" aria-label="Help">
+  <i class="icon fa fa-circle-question text-info fa-fw " title="Help with Shuffle" role="img" aria-label="Help with Shuffle"></i>
+</a></span></span></div><ul class="section img-text yui3-dd-drop" data-draggroups="resource" id="yui_3_18_1_1_1765353722641_201"><li class="pagenumber activity yui3-dd-drop page" id="page-1"><h4 class="main page-section-title-hide">Page 1</h4><span class="add-menu-outer" id="yui_3_18_1_1_1765353722641_391"><div class="action-menu moodle-actionmenu nowrap-items page-add-actions commands" id="action-menu-2" data-enhance="moodle-core-actionmenu" bis_skin_checked="1">
+
+        <div class="menubar d-flex " id="action-menu-2-menubar" bis_skin_checked="1">
+
+            <div class="dropdown" bis_skin_checked="1" id="yui_3_18_1_1_1765353722641_390">
+    <a href="#" tabindex="0" class="dropdown-toggle icon-no-margin" id="action-menu-toggle-2" aria-label="Add" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-2-menu">
+        
+        <span class="add-menu">Add</span>
+            
+        <b class="caret"></b>
+    </a>
+        <div class="dropdown-menu menu dropdown-menu-end" id="action-menu-2-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-2" role="menu" bis_skin_checked="1" style="">
+                        <a href="https://ovesl.com/question/bank/editquestion/addquestion.php?returnurl=%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26cat%3D126%252C1034%26addonpage%3D1&amp;cmid=350&amp;category=126&amp;addonpage=1&amp;appendqnumstring=addquestion" class="dropdown-item cm-edit-action addquestion menu-action add-menu" data-action="addquestion" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a new question" role="img" aria-label="a new question"></i>
+            <span class="menu-action-text">a new question</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034" class="dropdown-item cm-edit-action questionbank menu-action add-menu" data-header="Add from the question bank to page 1" data-action="questionbank" data-addonpage="1" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="from question bank" role="img" aria-label="from question bank"></i>
+            <span class="menu-action-text">from question bank</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?returnurl=https%3A%2F%2Fovesl.com%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26amp%3Bdata-addonpage%3D1&amp;cmid=350&amp;appendqnumstring=addarandomquestion" class="dropdown-item cm-edit-action addarandomquestion menu-action add-menu" data-header="Add a random question to page 1" data-addonpage="1" data-action="addarandomquestion" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a random question" role="img" aria-label="a random question"></i>
+            <span class="menu-action-text">a random question</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;addsectionatpage=1" class="dropdown-item cm-edit-action addasection menu-action add-menu" data-action="addasection" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a new section heading" role="img" aria-label="a new section heading"></i>
+            <span class="menu-action-text">a new section heading</span>
+    </a>
+        </div>
+</div>
+
+
+
+
+        </div>
+
+</div></span><form class="addnewquestion" method="post" action="https://ovesl.com/question/bank/editquestion/addquestion.php"><div bis_skin_checked="1"><input type="hidden" name="returnurl" value="/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;addonpage=1"><input type="hidden" name="cmid" value="350"><input type="hidden" name="appendqnumstring" value="addquestion"><input type="hidden" name="category" value="126"></div></form></li><li class="activity multichoice qtype_multichoice slot yui3-dd-drop" id="slot-94" data-canfinish="0"><div bis_skin_checked="1"><span class="editing_move moodle-core-dragdrop-draghandle" title="Move" tabindex="0" data-draggroups="resource" role="button"><i class="icon fa fa-arrows-up-down-left-right fa-fw  iconsmall" aria-hidden="true" style="cursor: move;"></i></span><div class="mod-indent-outer" id="mod-indent-outer-slot-94" bis_skin_checked="1">
+    <input id="selectquestion-1" name="selectquestion[]" type="checkbox" class="select-multiple-checkbox" value="" data-action="toggle" data-toggle="target" data-togglegroup="quiz-questions">
+    <label for="selectquestion-1" class="visually-hidden">Select question 1</label>
+    <span class="slotnumber unshuffled"><span class="accesshide">Question</span> <span class="inplaceeditable inplaceeditable-text" data-inplaceeditable="1" data-component="mod_quiz" data-itemtype="slotdisplaynumber" data-itemid="94" data-value="1" data-editlabel="New value for 1" data-type="text" data-options="">
+        
+        <a href="#" class="quickeditlink aalink" data-inplaceeditablelink="1" title="Edit question number (maximum 16 characters)">
+            1
+            <span class="quickediticon visibleifjs icon-size-3">
+                <i class="icon fa fa-pen fa-fw " title="Edit question number (maximum 16 characters)" role="img" aria-label="Edit question number (maximum 16 characters)"></i>
+            </span>
+        </a>
+</span></span><span class="slotnumber shuffled"><span class="accesshide">Question</span> 1</span>
+    <div class="mod-indent" bis_skin_checked="1"></div>
+    <div class="activityinstance" bis_skin_checked="1">
+        <div bis_skin_checked="1"><a title="Edit question Câu 1:" href="https://ovesl.com/question/bank/editquestion/question.php?returnurl=%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26amp%3Bcat%3D126%252C1034&amp;cmid=350&amp;id=218"><img class="icon activityicon" title="Multiple choice" alt="Multiple choice" src="https://ovesl.com/theme/image.php/nice/qtype_multichoice/1765353611/icon"><span class="instancename"><i class="icon fa fa-pen fa-fw " aria-hidden="true"></i><span class="questionname">Câu 1:</span> <span class="questiontext">Ngôn ngữ lập trình C được Dennish phát triển dự...</span></span></a></div>
+    </div>
+    <div class="actions" bis_skin_checked="1">
+            <label for="version-94" class="visually-hidden">Question version</label>
+            <select id="version-94" name="version" class="form-select me-2 version-selection" data-action="mod_quiz-select_slot" data-slot-id="94" fdprocessedid="5auspr">
+                    <option value="0" selected="selected">Always latest</option>
+                    <option value="1">v1 (latest)</option>
+            </select>
+        <a href="https://ovesl.com/question/bank/previewquestion/preview.php?id=218&amp;restartversion=0&amp;cmid=350&amp;behaviour=deferredfeedback&amp;maxmark=1&amp;correctness=0&amp;marks=1&amp;markdp=2&amp;feedback&amp;generalfeedback&amp;rightanswer&amp;history" id="action_link693928fa7790a23" class="preview" title="Preview question"><i class="icon fa fa-magnifying-glass-plus fa-fw " title="Preview question" role="img" aria-label="Preview question"></i></a><a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;sesskey=dusrV7I9Jr&amp;remove=1" id="action_link693928fa7790a24" class="cm-edit-action editing_delete" title="Delete" data-action="delete"><i class="icon fa fa-trash-can fa-fw " title="Delete" role="img" aria-label="Delete"></i></a><span class="instancemaxmarkcontainer"><span class="instancemaxmark decimalplaces_2" title="Maximum mark">1.00</span><span><a class="editing_maxmark" data-action="editmaxmark" title="Edit maximum mark" href="#"><i class="icon fa fa-pen fa-fw editicon visibleifjs" aria-hidden="true"></i></a></span></span>
+    </div>
+        <span class="question_dependency_wrapper question_dependency_cannot_depend"><a href="#" id="action_link693928fa7790a25" class="cm-edit-action" title="No restriction on when question 1 can be attempted • Click to change" data-action="adddependency"><i class="icon fa fa-lock-open fa-fw " title="No restriction on this question" role="img" aria-label="No restriction on this question"></i></a></span>
+</div></div><span class="page_split_join_wrapper"><a href="repaginate.php?quizid=27&amp;slot=1&amp;repag=1&amp;sesskey=dusrV7I9Jr" id="action_link693928fa7790a22" class="page_split_join cm-edit-action" title="Remove page break" data-action="removepagebreak"><img class="icon " alt="Remove page break" title="Remove page break" src="https://ovesl.com/theme/image.php/nice/core/1765353611/e/remove_page_break"></a></span></li><li class="pagenumber activity yui3-dd-drop page" id="page-2"><h4 class="main page-section-title-hide">Page 2</h4><span class="add-menu-outer"><div class="action-menu moodle-actionmenu nowrap-items page-add-actions commands" id="action-menu-3" data-enhance="moodle-core-actionmenu" bis_skin_checked="1">
+
+        <div class="menubar d-flex " id="action-menu-3-menubar" bis_skin_checked="1">
+
+            <div class="dropdown" bis_skin_checked="1">
+    <a href="#" tabindex="0" class=" dropdown-toggle icon-no-margin" id="action-menu-toggle-3" aria-label="Add" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-3-menu">
+        
+        <span class="add-menu">Add</span>
+            
+        <b class="caret"></b>
+    </a>
+        <div class="dropdown-menu menu dropdown-menu-end" id="action-menu-3-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-3" role="menu" bis_skin_checked="1">
+                        <a href="https://ovesl.com/question/bank/editquestion/addquestion.php?returnurl=%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26cat%3D126%252C1034%26addonpage%3D2&amp;cmid=350&amp;category=126&amp;addonpage=2&amp;appendqnumstring=addquestion" class="dropdown-item cm-edit-action addquestion menu-action add-menu" data-action="addquestion" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a new question" role="img" aria-label="a new question"></i>
+            <span class="menu-action-text">a new question</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034" class="dropdown-item cm-edit-action questionbank menu-action add-menu" data-header="Add from the question bank to page 2" data-action="questionbank" data-addonpage="2" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="from question bank" role="img" aria-label="from question bank"></i>
+            <span class="menu-action-text">from question bank</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?returnurl=https%3A%2F%2Fovesl.com%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26amp%3Bdata-addonpage%3D2&amp;cmid=350&amp;appendqnumstring=addarandomquestion" class="dropdown-item cm-edit-action addarandomquestion menu-action add-menu" data-header="Add a random question to page 2" data-addonpage="2" data-action="addarandomquestion" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a random question" role="img" aria-label="a random question"></i>
+            <span class="menu-action-text">a random question</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;addsectionatpage=2" class="dropdown-item cm-edit-action addasection menu-action add-menu" data-action="addasection" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a new section heading" role="img" aria-label="a new section heading"></i>
+            <span class="menu-action-text">a new section heading</span>
+    </a>
+        </div>
+</div>
+
+
+
+
+        </div>
+
+</div></span><form class="addnewquestion" method="post" action="https://ovesl.com/question/bank/editquestion/addquestion.php"><div bis_skin_checked="1"><input type="hidden" name="returnurl" value="/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;addonpage=2"><input type="hidden" name="cmid" value="350"><input type="hidden" name="appendqnumstring" value="addquestion"><input type="hidden" name="category" value="126"></div></form></li><li class="activity truefalse qtype_truefalse slot yui3-dd-drop" id="slot-95" data-canfinish="0"><div bis_skin_checked="1"><span class="editing_move moodle-core-dragdrop-draghandle" title="Move" tabindex="0" data-draggroups="resource" role="button"><i class="icon fa fa-arrows-up-down-left-right fa-fw  iconsmall" aria-hidden="true" style="cursor: move;"></i></span><div class="mod-indent-outer" id="mod-indent-outer-slot-95" bis_skin_checked="1">
+    <input id="selectquestion-2" name="selectquestion[]" type="checkbox" class="select-multiple-checkbox" value="" data-action="toggle" data-toggle="target" data-togglegroup="quiz-questions">
+    <label for="selectquestion-2" class="visually-hidden">Select question 2</label>
+    <span class="slotnumber unshuffled"><span class="accesshide">Question</span> <span class="inplaceeditable inplaceeditable-text" data-inplaceeditable="1" data-component="mod_quiz" data-itemtype="slotdisplaynumber" data-itemid="95" data-value="2" data-editlabel="New value for 2" data-type="text" data-options="">
+        
+        <a href="#" class="quickeditlink aalink" data-inplaceeditablelink="1" title="Edit question number (maximum 16 characters)">
+            2
+            <span class="quickediticon visibleifjs icon-size-3">
+                <i class="icon fa fa-pen fa-fw " title="Edit question number (maximum 16 characters)" role="img" aria-label="Edit question number (maximum 16 characters)"></i>
+            </span>
+        </a>
+</span></span><span class="slotnumber shuffled"><span class="accesshide">Question</span> 2</span>
+    <div class="mod-indent" bis_skin_checked="1"></div>
+    <div class="activityinstance" bis_skin_checked="1">
+        <div bis_skin_checked="1"><a title="Edit question Câu 2:" href="https://ovesl.com/question/bank/editquestion/question.php?returnurl=%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26amp%3Bcat%3D126%252C1034&amp;cmid=350&amp;id=219"><img class="icon activityicon" title="True/False" alt="True/False" src="https://ovesl.com/theme/image.php/nice/qtype_truefalse/1765353611/icon"><span class="instancename"><i class="icon fa fa-pen fa-fw " aria-hidden="true"></i><span class="questionname">Câu 2:</span> <span class="questiontext">Mỹ đã thử nghiệm 2 quả bom nguyên tử xuống Nhật...</span></span></a></div>
+    </div>
+    <div class="actions" bis_skin_checked="1">
+            <label for="version-95" class="visually-hidden">Question version</label>
+            <select id="version-95" name="version" class="form-select me-2 version-selection" data-action="mod_quiz-select_slot" data-slot-id="95" fdprocessedid="057fk">
+                    <option value="0" selected="selected">Always latest</option>
+                    <option value="1">v1 (latest)</option>
+            </select>
+        <a href="https://ovesl.com/question/bank/previewquestion/preview.php?id=219&amp;restartversion=0&amp;cmid=350&amp;behaviour=deferredfeedback&amp;maxmark=1&amp;correctness=0&amp;marks=1&amp;markdp=2&amp;feedback&amp;generalfeedback&amp;rightanswer&amp;history" id="action_link693928fa7790a31" class="preview" title="Preview question"><i class="icon fa fa-magnifying-glass-plus fa-fw " title="Preview question" role="img" aria-label="Preview question"></i></a><a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;sesskey=dusrV7I9Jr&amp;remove=2" id="action_link693928fa7790a32" class="cm-edit-action editing_delete" title="Delete" data-action="delete"><i class="icon fa fa-trash-can fa-fw " title="Delete" role="img" aria-label="Delete"></i></a><span class="instancemaxmarkcontainer"><span class="instancemaxmark decimalplaces_2" title="Maximum mark">1.00</span><span><a class="editing_maxmark" data-action="editmaxmark" title="Edit maximum mark" href="#"><i class="icon fa fa-pen fa-fw editicon visibleifjs" aria-hidden="true"></i></a></span></span>
+    </div>
+        <span class="question_dependency_wrapper question_dependency_cannot_depend"><a href="#" id="action_link693928fa7790a33" class="cm-edit-action" title="No restriction on when question 2 can be attempted • Click to change" data-action="adddependency"><i class="icon fa fa-lock-open fa-fw " title="No restriction on this question" role="img" aria-label="No restriction on this question"></i></a></span>
+</div></div><span class="page_split_join_wrapper"><a href="repaginate.php?quizid=27&amp;slot=2&amp;repag=1&amp;sesskey=dusrV7I9Jr" id="action_link693928fa7790a30" class="page_split_join cm-edit-action" title="Remove page break" data-action="removepagebreak"><img class="icon " alt="Remove page break" title="Remove page break" src="https://ovesl.com/theme/image.php/nice/core/1765353611/e/remove_page_break"></a></span></li><li class="pagenumber activity yui3-dd-drop page" id="page-3"><h4 class="main page-section-title-hide">Page 3</h4><span class="add-menu-outer"><div class="action-menu moodle-actionmenu nowrap-items page-add-actions commands" id="action-menu-4" data-enhance="moodle-core-actionmenu" bis_skin_checked="1">
+
+        <div class="menubar d-flex " id="action-menu-4-menubar" bis_skin_checked="1">
+
+            <div class="dropdown" bis_skin_checked="1">
+    <a href="#" tabindex="0" class=" dropdown-toggle icon-no-margin" id="action-menu-toggle-4" aria-label="Add" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-4-menu">
+        
+        <span class="add-menu">Add</span>
+            
+        <b class="caret"></b>
+    </a>
+        <div class="dropdown-menu menu dropdown-menu-end" id="action-menu-4-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-4" role="menu" bis_skin_checked="1">
+                        <a href="https://ovesl.com/question/bank/editquestion/addquestion.php?returnurl=%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26cat%3D126%252C1034%26addonpage%3D3&amp;cmid=350&amp;category=126&amp;addonpage=3&amp;appendqnumstring=addquestion" class="dropdown-item cm-edit-action addquestion menu-action add-menu" data-action="addquestion" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a new question" role="img" aria-label="a new question"></i>
+            <span class="menu-action-text">a new question</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034" class="dropdown-item cm-edit-action questionbank menu-action add-menu" data-header="Add from the question bank to page 3" data-action="questionbank" data-addonpage="3" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="from question bank" role="img" aria-label="from question bank"></i>
+            <span class="menu-action-text">from question bank</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?returnurl=https%3A%2F%2Fovesl.com%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26amp%3Bdata-addonpage%3D3&amp;cmid=350&amp;appendqnumstring=addarandomquestion" class="dropdown-item cm-edit-action addarandomquestion menu-action add-menu" data-header="Add a random question to page 3" data-addonpage="3" data-action="addarandomquestion" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a random question" role="img" aria-label="a random question"></i>
+            <span class="menu-action-text">a random question</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;addsectionatpage=3" class="dropdown-item cm-edit-action addasection menu-action add-menu" data-action="addasection" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a new section heading" role="img" aria-label="a new section heading"></i>
+            <span class="menu-action-text">a new section heading</span>
+    </a>
+        </div>
+</div>
+
+
+
+
+        </div>
+
+</div></span><form class="addnewquestion" method="post" action="https://ovesl.com/question/bank/editquestion/addquestion.php"><div bis_skin_checked="1"><input type="hidden" name="returnurl" value="/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;addonpage=3"><input type="hidden" name="cmid" value="350"><input type="hidden" name="appendqnumstring" value="addquestion"><input type="hidden" name="category" value="126"></div></form></li><li class="activity match qtype_match slot yui3-dd-drop" id="slot-96" data-canfinish="0"><div bis_skin_checked="1"><span class="editing_move moodle-core-dragdrop-draghandle" title="Move" tabindex="0" data-draggroups="resource" role="button"><i class="icon fa fa-arrows-up-down-left-right fa-fw  iconsmall" aria-hidden="true" style="cursor: move;"></i></span><div class="mod-indent-outer" id="mod-indent-outer-slot-96" bis_skin_checked="1">
+    <input id="selectquestion-3" name="selectquestion[]" type="checkbox" class="select-multiple-checkbox" value="" data-action="toggle" data-toggle="target" data-togglegroup="quiz-questions">
+    <label for="selectquestion-3" class="visually-hidden">Select question 3</label>
+    <span class="slotnumber unshuffled"><span class="accesshide">Question</span> <span class="inplaceeditable inplaceeditable-text" data-inplaceeditable="1" data-component="mod_quiz" data-itemtype="slotdisplaynumber" data-itemid="96" data-value="3" data-editlabel="New value for 3" data-type="text" data-options="">
+        
+        <a href="#" class="quickeditlink aalink" data-inplaceeditablelink="1" title="Edit question number (maximum 16 characters)">
+            3
+            <span class="quickediticon visibleifjs icon-size-3">
+                <i class="icon fa fa-pen fa-fw " title="Edit question number (maximum 16 characters)" role="img" aria-label="Edit question number (maximum 16 characters)"></i>
+            </span>
+        </a>
+</span></span><span class="slotnumber shuffled"><span class="accesshide">Question</span> 3</span>
+    <div class="mod-indent" bis_skin_checked="1"></div>
+    <div class="activityinstance" bis_skin_checked="1">
+        <div bis_skin_checked="1"><a title="Edit question Câu 3:" href="https://ovesl.com/question/bank/editquestion/question.php?returnurl=%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26amp%3Bcat%3D126%252C1034&amp;cmid=350&amp;id=220"><img class="icon activityicon" title="Matching" alt="Matching" src="https://ovesl.com/theme/image.php/nice/qtype_match/1765353611/icon"><span class="instancename"><i class="icon fa fa-pen fa-fw " aria-hidden="true"></i><span class="questionname">Câu 3:</span> <span class="questiontext">Hãy ghép các cặp từ tiếng Việt và tiếng Anh một...</span></span></a></div>
+    </div>
+    <div class="actions" bis_skin_checked="1">
+            <label for="version-96" class="visually-hidden">Question version</label>
+            <select id="version-96" name="version" class="form-select me-2 version-selection" data-action="mod_quiz-select_slot" data-slot-id="96" fdprocessedid="ndxcmt">
+                    <option value="0" selected="selected">Always latest</option>
+                    <option value="1">v1 (latest)</option>
+            </select>
+        <a href="https://ovesl.com/question/bank/previewquestion/preview.php?id=220&amp;restartversion=0&amp;cmid=350&amp;behaviour=deferredfeedback&amp;maxmark=10&amp;correctness=0&amp;marks=1&amp;markdp=2&amp;feedback&amp;generalfeedback&amp;rightanswer&amp;history" id="action_link693928fa7790a39" class="preview" title="Preview question"><i class="icon fa fa-magnifying-glass-plus fa-fw " title="Preview question" role="img" aria-label="Preview question"></i></a><a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;sesskey=dusrV7I9Jr&amp;remove=3" id="action_link693928fa7790a40" class="cm-edit-action editing_delete" title="Delete" data-action="delete"><i class="icon fa fa-trash-can fa-fw " title="Delete" role="img" aria-label="Delete"></i></a><span class="instancemaxmarkcontainer"><span class="instancemaxmark decimalplaces_2" title="Maximum mark">10.00</span><span><a class="editing_maxmark" data-action="editmaxmark" title="Edit maximum mark" href="#"><i class="icon fa fa-pen fa-fw editicon visibleifjs" aria-hidden="true"></i></a></span></span>
+    </div>
+        <span class="question_dependency_wrapper question_dependency_cannot_depend"><a href="#" id="action_link693928fa7790a41" class="cm-edit-action" title="No restriction on when question 3 can be attempted • Click to change" data-action="adddependency"><i class="icon fa fa-lock-open fa-fw " title="No restriction on this question" role="img" aria-label="No restriction on this question"></i></a></span>
+</div></div><span class="page_split_join_wrapper"><a href="repaginate.php?quizid=27&amp;slot=3&amp;repag=1&amp;sesskey=dusrV7I9Jr" id="action_link693928fa7790a38" class="page_split_join cm-edit-action" title="Remove page break" data-action="removepagebreak"><img class="icon " alt="Remove page break" title="Remove page break" src="https://ovesl.com/theme/image.php/nice/core/1765353611/e/remove_page_break"></a></span></li><li class="pagenumber activity yui3-dd-drop page" id="page-4"><h4 class="main page-section-title-hide">Page 4</h4><span class="add-menu-outer"><div class="action-menu moodle-actionmenu nowrap-items page-add-actions commands" id="action-menu-5" data-enhance="moodle-core-actionmenu" bis_skin_checked="1">
+
+        <div class="menubar d-flex " id="action-menu-5-menubar" bis_skin_checked="1">
+
+            <div class="dropdown" bis_skin_checked="1">
+    <a href="#" tabindex="0" class=" dropdown-toggle icon-no-margin" id="action-menu-toggle-5" aria-label="Add" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-5-menu">
+        
+        <span class="add-menu">Add</span>
+            
+        <b class="caret"></b>
+    </a>
+        <div class="dropdown-menu menu dropdown-menu-end" id="action-menu-5-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-5" role="menu" bis_skin_checked="1">
+                        <a href="https://ovesl.com/question/bank/editquestion/addquestion.php?returnurl=%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26cat%3D126%252C1034%26addonpage%3D4&amp;cmid=350&amp;category=126&amp;addonpage=4&amp;appendqnumstring=addquestion" class="dropdown-item cm-edit-action addquestion menu-action add-menu" data-action="addquestion" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a new question" role="img" aria-label="a new question"></i>
+            <span class="menu-action-text">a new question</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034" class="dropdown-item cm-edit-action questionbank menu-action add-menu" data-header="Add from the question bank to page 4" data-action="questionbank" data-addonpage="4" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="from question bank" role="img" aria-label="from question bank"></i>
+            <span class="menu-action-text">from question bank</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?returnurl=https%3A%2F%2Fovesl.com%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26amp%3Bdata-addonpage%3D4&amp;cmid=350&amp;appendqnumstring=addarandomquestion" class="dropdown-item cm-edit-action addarandomquestion menu-action add-menu" data-header="Add a random question to page 4" data-addonpage="4" data-action="addarandomquestion" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a random question" role="img" aria-label="a random question"></i>
+            <span class="menu-action-text">a random question</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;addsectionatpage=4" class="dropdown-item cm-edit-action addasection menu-action add-menu" data-action="addasection" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a new section heading" role="img" aria-label="a new section heading"></i>
+            <span class="menu-action-text">a new section heading</span>
+    </a>
+        </div>
+</div>
+
+
+
+
+        </div>
+
+</div></span><form class="addnewquestion" method="post" action="https://ovesl.com/question/bank/editquestion/addquestion.php"><div bis_skin_checked="1"><input type="hidden" name="returnurl" value="/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;addonpage=4"><input type="hidden" name="cmid" value="350"><input type="hidden" name="appendqnumstring" value="addquestion"><input type="hidden" name="category" value="126"></div></form></li><li class="activity shortanswer qtype_shortanswer slot yui3-dd-drop" id="slot-97" data-canfinish="0"><div bis_skin_checked="1"><span class="editing_move moodle-core-dragdrop-draghandle" title="Move" tabindex="0" data-draggroups="resource" role="button"><i class="icon fa fa-arrows-up-down-left-right fa-fw  iconsmall" aria-hidden="true" style="cursor: move;"></i></span><div class="mod-indent-outer" id="mod-indent-outer-slot-97" bis_skin_checked="1">
+    <input id="selectquestion-4" name="selectquestion[]" type="checkbox" class="select-multiple-checkbox" value="" data-action="toggle" data-toggle="target" data-togglegroup="quiz-questions">
+    <label for="selectquestion-4" class="visually-hidden">Select question 4</label>
+    <span class="slotnumber unshuffled"><span class="accesshide">Question</span> <span class="inplaceeditable inplaceeditable-text" data-inplaceeditable="1" data-component="mod_quiz" data-itemtype="slotdisplaynumber" data-itemid="97" data-value="4" data-editlabel="New value for 4" data-type="text" data-options="">
+        
+        <a href="#" class="quickeditlink aalink" data-inplaceeditablelink="1" title="Edit question number (maximum 16 characters)">
+            4
+            <span class="quickediticon visibleifjs icon-size-3">
+                <i class="icon fa fa-pen fa-fw " title="Edit question number (maximum 16 characters)" role="img" aria-label="Edit question number (maximum 16 characters)"></i>
+            </span>
+        </a>
+</span></span><span class="slotnumber shuffled"><span class="accesshide">Question</span> 4</span>
+    <div class="mod-indent" bis_skin_checked="1"></div>
+    <div class="activityinstance" bis_skin_checked="1">
+        <div bis_skin_checked="1"><a title="Edit question Câu 4:" href="https://ovesl.com/question/bank/editquestion/question.php?returnurl=%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26amp%3Bcat%3D126%252C1034&amp;cmid=350&amp;id=221"><img class="icon activityicon" title="Short answer" alt="Short answer" src="https://ovesl.com/theme/image.php/nice/qtype_shortanswer/1765353611/icon"><span class="instancename"><i class="icon fa fa-pen fa-fw " aria-hidden="true"></i><span class="questionname">Câu 4:</span> <span class="questiontext">Ai đã đưa vùa Minh Mạng chạy trốn địch và sau ...</span></span></a></div>
+    </div>
+    <div class="actions" bis_skin_checked="1">
+            <label for="version-97" class="visually-hidden">Question version</label>
+            <select id="version-97" name="version" class="form-select me-2 version-selection" data-action="mod_quiz-select_slot" data-slot-id="97" fdprocessedid="hbsyct">
+                    <option value="0" selected="selected">Always latest</option>
+                    <option value="1">v1 (latest)</option>
+            </select>
+        <a href="https://ovesl.com/question/bank/previewquestion/preview.php?id=221&amp;restartversion=0&amp;cmid=350&amp;behaviour=deferredfeedback&amp;maxmark=1&amp;correctness=0&amp;marks=1&amp;markdp=2&amp;feedback&amp;generalfeedback&amp;rightanswer&amp;history" id="action_link693928fa7790a46" class="preview" title="Preview question"><i class="icon fa fa-magnifying-glass-plus fa-fw " title="Preview question" role="img" aria-label="Preview question"></i></a><a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;sesskey=dusrV7I9Jr&amp;remove=4" id="action_link693928fa7790a47" class="cm-edit-action editing_delete" title="Delete" data-action="delete"><i class="icon fa fa-trash-can fa-fw " title="Delete" role="img" aria-label="Delete"></i></a><span class="instancemaxmarkcontainer"><span class="instancemaxmark decimalplaces_2" title="Maximum mark">1.00</span><span><a class="editing_maxmark" data-action="editmaxmark" title="Edit maximum mark" href="#"><i class="icon fa fa-pen fa-fw editicon visibleifjs" aria-hidden="true"></i></a></span></span>
+    </div>
+        <span class="question_dependency_wrapper question_dependency_cannot_depend"><a href="#" id="action_link693928fa7790a48" class="cm-edit-action" title="No restriction on when question 4 can be attempted • Click to change" data-action="adddependency"><i class="icon fa fa-lock-open fa-fw " title="No restriction on this question" role="img" aria-label="No restriction on this question"></i></a></span>
+</div></div></li></ul><div class="last-add-menu" bis_skin_checked="1"><span class="add-menu-outer"><div class="action-menu moodle-actionmenu nowrap-items page-add-actions commands" id="action-menu-6" data-enhance="moodle-core-actionmenu" bis_skin_checked="1">
+
+        <div class="menubar d-flex " id="action-menu-6-menubar" bis_skin_checked="1">
+
+            <div class="dropdown" bis_skin_checked="1">
+    <a href="#" tabindex="0" class=" dropdown-toggle icon-no-margin" id="action-menu-toggle-6" aria-label="Add" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-6-menu">
+        
+        <span class="add-menu">Add</span>
+            
+        <b class="caret"></b>
+    </a>
+        <div class="dropdown-menu menu dropdown-menu-end" id="action-menu-6-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-6" role="menu" bis_skin_checked="1">
+                        <a href="https://ovesl.com/question/bank/editquestion/addquestion.php?returnurl=%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26cat%3D126%252C1034%26addonpage%3D0&amp;cmid=350&amp;category=126&amp;addonpage=0&amp;appendqnumstring=addquestion" class="dropdown-item cm-edit-action addquestion menu-action add-menu" data-action="addquestion" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a new question" role="img" aria-label="a new question"></i>
+            <span class="menu-action-text">a new question</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034" class="dropdown-item cm-edit-action questionbank menu-action add-menu" data-header="Add from the question bank at the end" data-action="questionbank" data-addonpage="0" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="from question bank" role="img" aria-label="from question bank"></i>
+            <span class="menu-action-text">from question bank</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?returnurl=https%3A%2F%2Fovesl.com%2Fmod%2Fquiz%2Fedit.php%3Fcmid%3D350%26amp%3Bdata-addonpage%3D0&amp;cmid=350&amp;appendqnumstring=addarandomquestion" class="dropdown-item cm-edit-action addarandomquestion menu-action add-menu" data-header="Add a random question at the end" data-addonpage="0" data-action="addarandomquestion" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a random question" role="img" aria-label="a random question"></i>
+            <span class="menu-action-text">a random question</span>
+    </a>
+                        <a href="https://ovesl.com/mod/quiz/edit.php?cmid=350&amp;cat=126%2C1034&amp;addsectionatpage=0" class="dropdown-item cm-edit-action addasection menu-action add-menu" data-action="addasection" role="menuitem" tabindex="-1">
+            <i class="icon fa fa-plus fa-fw " title="a new section heading" role="img" aria-label="a new section heading"></i>
+            <span class="menu-action-text">a new section heading</span>
+    </a>
+        </div>
+</div>
+
+
+
+
+        </div>
+
+</div></span></div></div></li></ul>

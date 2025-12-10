@@ -1,0 +1,314 @@
+/* --- Tùy chỉnh bảng danh sách Diễn đàn Moodle --- */
+
+/* 1. Làm sạch khung bảng */
+.discussion-list.table {
+    border-collapse: separate; 
+    border-spacing: 0 8px; /* Tạo khoảng cách giữa các hàng */
+    background-color: transparent;
+}
+
+/* 2. Ẩn đường viền bảng gốc và header xấu */
+.discussion-list thead th {
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #888;
+    letter-spacing: 0.5px;
+    padding-bottom: 10px;
+}
+
+/* 3. Biến mỗi hàng thảo luận thành một "Card" nổi */
+.discussion-list tbody tr {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03); /* Đổ bóng nhẹ */
+    border-radius: 8px; /* Bo tròn góc */
+    transition: all 0.2s ease;
+}
+
+/* Hiệu ứng khi di chuột vào hàng */
+.discussion-list tbody tr:hover {
+    background-color: #fff;
+    z-index: 10;
+}
+
+/* 4. Tùy chỉnh cột Tiêu đề (Discussion Topic) */
+.discussion-list th.topic, 
+.discussion-list td {
+    border: none !important; /* Bỏ đường kẻ ngang mặc định */
+    vertical-align: middle; /* Căn giữa theo chiều dọc */
+    padding: 15px 10px;
+}
+
+.discussion-list th.topic a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+/* 5. Tinh chỉnh Avatar và thông tin người đăng */
+.discussion-list .userpicture {
+    width: 35px; /* Giảm kích thước avatar một chút */
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 2px solid #f0f2f5;
+}
+
+.discussion-list .author-info .text-truncate {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.discussion-list .author-info time {
+    font-size: 0.75rem;
+    color: #999; /* Làm mờ ngày tháng */
+}
+
+/* 6. Làm gọn cột Replies (Số trả lời) */
+.discussion-list td.text-center {
+    font-weight: bold;
+    color: #555;
+    background-color: rgba(0,0,0,0.01); /* Màu nền siêu nhẹ để tách biệt */
+}
+
+/* 7. Nút Subscribe (Đăng ký) gọn hơn */
+.discussion-list .form-switch {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Xử lý cột Status (Khóa/Ghim) nếu có */
+.discussion-list .badge {
+    font-weight: 500;
+    padding: 4px 8px;
+}
+
+#page-mod-forum-discuss .forum-post-container{ 
+   margin-top: 20px;
+}
+
+#page-mod-forum-discuss .discussion-nav .next-discussion {
+    font-style: italic;
+}
+
+#page-mod-forum-discuss .discussion-nav {
+    margin: 1.5em 0 !important;
+}
+/* --- Tùy chỉnh giao diện bài thảo luận (Forum Post) --- */
+
+/* 1. Tổng thể khung bài viết: Bỏ viền cứng, thêm đổ bóng nhẹ */
+.path-mod-forum .forumpost {
+    border: none !important; /* Bỏ viền xám mặc định */
+    background-color: #fff;
+    border-radius: 16px; /* Bo góc mềm mại */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04); /* Đổ bóng mịn */
+    padding: 20px !important;
+    margin-bottom: 25px;
+    transition: transform 0.2s ease;
+}
+
+
+/* 2. Phần Header (Thông tin người đăng): Làm gọn lại */
+.path-mod-forum .forumpost .header {
+    margin-bottom: 15px !important;
+    border-bottom: 1px dashed #eee; /* Đường kẻ ngăn cách mờ */
+    padding-bottom: 10px;
+}
+
+/* Avatar hình tròn hoàn hảo */
+.path-mod-forum .forumpost .header img.userpicture {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Tên chủ đề bài viết */
+.path-mod-forum .forumpost .subject {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    font-weight: 700 !important;
+    margin-bottom: 4px;
+}
+
+/* Tên tác giả và ngày tháng */
+.path-mod-forum .forumpost .author {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 3. Phần nội dung chính: Tăng khoảng cách dòng cho dễ đọc */
+.path-mod-forum .forumpost .content {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6; /* Giãn dòng ra cho thoáng */
+    padding: 5px 0 15px 0;
+}
+
+/* 4. Các nút hành động (Reply, Permalink): Biến thành nút bấm pill-shape */
+.path-mod-forum .forumpost .post-actions {
+    opacity: 0.8;
+}
+
+.path-mod-forum .forumpost .post-actions a {
+    text-decoration: none;
+    padding: 6px 16px;
+    background-color: #f1f3f5; /* Màu nền xám nhạt */
+    color: #495057;
+    border-radius: 20px; /* Bo tròn hình viên thuốc */
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-left: 8px;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+/* Hover vào nút hành động */
+.path-mod-forum .forumpost .post-actions a:hover {
+    background-color: #0f6cbf; /* Đổi màu xanh khi hover (tuỳ màu theme của bạn) */
+    color: #fff !important;
+    text-decoration: none;
+}
+
+/* 5. Xử lý các bài trả lời lồng nhau (Indented replies) */
+/* Tạo đường kẻ dọc bên trái để biết là đang trả lời bài trên */
+.path-mod-forum .indent {
+    border-left: 3px solid #e9ecef;
+    margin-left: 20px !important;
+    padding-left: 20px !important;
+}
+
+/* --- Tùy chỉnh riêng cột Last Post (Bài mới nhất) --- */
+.discussion-list th.lastpost {
+    /* 1. Đặt độ rộng cố định để đủ chỗ cho cả chữ và icon */
+    width: 20%; 
+    min-width: 160px; /* Đảm bảo không bao giờ bị co nhỏ hơn mức này */
+
+    /* 2. Căn chỉnh trên 1 hàng (Flexbox) */
+    display: flex !important; /* !important để ghi đè style inline nếu có */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: flex-start; /* Căn lề trái */
+    
+    /* 3. Ngăn chặn xuống dòng tuyệt đối */
+    white-space: nowrap; 
+    gap: 5px; /* Tạo khoảng cách nhỏ giữa chữ "Last post" và mũi tên */
+}
+
+/* Tùy chỉnh thêm: Ẩn mũi tên sắp xếp khi chưa hover (để nhìn thoáng hơn) - Tuỳ chọn */
+.discussion-list th.lastpost .icon {
+    margin-left: 5px; /* Cách chữ ra một chút */
+}
+
+
+/* =========================================================
+   FIX OVERFLOW NAVIGATION (FINAL VERSION)
+   ========================================================= */
+
+/* 1. CONTAINER CHÍNH */
+.nice-activity-navigation {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px; 
+    padding: 15px 20px !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    
+    /* Đảm bảo container không bị vỡ layout khi co giãn */
+    max-width: 100%; 
+    box-sizing: border-box;
+}
+
+/* 2. CỤM GIỮA (CHỨA SELECT) - TRÁI TIM CỦA BẢN FIX */
+.nice-activity-navigation > div.flex-grow-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* --- KHU VỰC QUAN TRỌNG NHẤT --- */
+    flex: 1 1 auto;        /* Co giãn linh hoạt chiếm khoảng trống còn lại */
+    min-width: 0;          /* MẤU CHỐT: Cho phép div này co nhỏ hơn nội dung bên trong */
+    width: 0;              /* Bổ trợ: Ép trình duyệt tính toán lại độ rộng dựa trên flex thay vì content */
+    /* ------------------------------ */
+}
+
+/* Wrapper bao quanh Label và Select */
+.activity-jumpto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    /* Ép wrapper không được vượt quá độ rộng của cha */
+    width: 100%;           
+    max-width: 100%;       
+    justify-content: center; /* Canh giữa nội dung */
+}
+
+/* 3. THẺ SELECT (DROPDOWN) */
+.nice-activity-navigation select.form-select {
+    /* Style cơ bản */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50px !important;
+    padding: 8px 35px 8px 20px !important;
+    color: #333;
+    cursor: pointer;
+    
+    /* --- FIX TRÀN (OVERFLOW) CHO SELECT --- */
+    flex: 1;               /* Chiếm hết khoảng trống còn lại trong wrapper */
+    width: 100%;           /* Độ rộng ưu tiên là 100% */
+    min-width: 0;          /* Cho phép select co lại cực nhỏ nếu cần */
+    max-width: 100%;       /* Tuyệt đối không tràn ra khỏi cha */
+    
+    /* Xử lý hiển thị chữ khi bị co lại */
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* 4. NHÃN "JUMP TO" */
+.nice-activity-navigation label {
+    font-weight: 600;
+    color: #555;
+    margin: 0;
+    white-space: nowrap;   /* Không xuống dòng */
+    flex-shrink: 0;        /* Không bao giờ được co lại (luôn hiển thị đủ chữ Jump to) */
+}
+
+/* 5. NÚT PREV / NEXT */
+.nice-activity-navigation .btn-outline-secondary,
+.nice-activity-navigation a.btn {
+    /* Đảm bảo nút không bị bóp méo khi không gian hẹp */
+    flex-shrink: 0;        
+    
+    /* Style đẹp */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; 
+    padding: 0 20px !important; 
+    border-radius: 50px !important; 
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #555;
+    font-weight: 500;
+    white-space: nowrap; 
+    transition: all 0.2s;
+}
+
+/* Hiệu ứng Hover */
+.nice-activity-navigation .btn-outline-secondary:hover,
+.nice-activity-navigation a.btn:hover,
+.nice-activity-navigation select.form-select:hover {
+    border-color: #1F5F73;
+    color: #1F5F73 !important;
+    background-color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
