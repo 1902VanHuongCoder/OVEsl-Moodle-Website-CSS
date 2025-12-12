@@ -63,10 +63,8 @@
 /* --- 3. LƯỚI NÚT CÂU HỎI --- */
 /* Giữ layout Grid để căn chỉnh đều */
 .qn_buttons {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(36px, 1fr)) !important;
-    gap: 6px !important; /* Khoảng cách nhỏ gọn */
     margin-bottom: 0 !important;
+    
 }
 
 /* --- 4. NÚT CÂU HỎI (BUTTONS) --- */
@@ -95,11 +93,20 @@
 
 /* -- TRẠNG THÁI 2: ĐANG LÀM (Active) -- */
 /* Dùng màu đen hoặc xanh đậm phẳng (Flat) */
+#page-mod-quiz-attempt .qn_buttons > a, #page-mod-quiz-summary .qn_buttons > a {
+    margin-right: 5px !important;
+}
 .qnbutton.thispage {
     background-color: #333333 !important; /* Màu tối trung tính */
     color: #ffffff !important;
     border: 1px solid #333333 !important;
     font-weight: 700 !important;
+    margin-right: 5px !important;
+}
+
+.qnbutton.thispage:hover {
+    background-color: #555555 !important; /* Màu xám đậm khi hover */
+    border-color: #555555 !important;
 }
 
 /* -- TRẠNG THÁI 3: ĐÃ LÀM (Answered) -- */
@@ -116,12 +123,34 @@
     cursor: pointer !important;
 }
 
+.qn_buttons .qnbutton.flagged {
+    position: relative; /* Để định vị tam giác */
+    overflow: hidden;
+}
+
+/* Tạo hình tam giác ở góc trên bên phải */
+.qn_buttons .qnbutton.flagged::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 15px 0; /* Kích thước tam giác */
+    border-color: transparent #dc3545 transparent transparent; /* Màu đỏ */
+    z-index: 1;
+}
+
+
 /* --- 5. ẨN THÀNH PHẦN THỪA --- */
 .qnbutton .trafficlight,
 .qnbutton .thispageholder,
 .qnbutton .accesshide {
     display: none !important;
 }
+
+
 
 /* --- 6. LINK NỘP BÀI (FINISH ATTEMPT) --- */
 /* Đơn giản hóa thành nút viền (Outline button) */
@@ -264,7 +293,6 @@
     cursor: pointer !important;
     font-size: 1rem !important;
     color: #374151 !important;
-    width: 100% !important; /* Bấm vào đâu trên dòng cũng ăn */
 }
 
 /* --- 6. PHẦN FEEDBACK (PHẢN HỒI SAU KHI NỘP) --- */
@@ -471,7 +499,7 @@ table.quizsummaryofattempt tbody tr:last-child td {
     margin-bottom: 20px !important;
     box-shadow: 0 2px 4px rgba(0,0,0,0.02) !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
-    padding-bottom: 2px !important;
+    padding-bottom: 5px !important;
 }
 
 /* --- 2. CÁC NÚT BẤM (BUTTONS) --- */
@@ -689,8 +717,6 @@ table.quizsummaryofattempt tbody tr:last-child td {
     align-items: center;
     gap: 12px;
     margin-left: auto; /* Đẩy về phía bên phải */
-    padding-left: 15px;
-    border-left: 1px solid #eee;
 }
 
 /* Ô nhập điểm số */
@@ -740,6 +766,9 @@ table.quizsummaryofattempt tbody tr:last-child td {
     text-decoration: none;
     font-weight: 600;
 }
+#page-mod-quiz-edit ul.slots li.section {
+    margin-bottom: 10px !important;
+}
 
 #page-mod-quiz-edit ul.slots li.section .content {
     padding: 30px 15px 15px !important;
@@ -767,4 +796,72 @@ table.quizsummaryofattempt tbody tr:last-child td {
 
 #page-mod-quiz-edit ul.slots li.section li.activity.page { 
     padding: 5px 0px !important;
+}
+
+#page-mod-quiz-edit .mod_quiz-edit-top-controls .selectmultiplecommand {
+    margin: 0 !important;
+        margin-bottom: 10px !important;
+
+}
+
+#page-mod-quiz-edit .mod_quiz-edit-top-controls .btn-toolbar {
+    margin: 0 !important;
+}
+
+#page-mod-quiz-edit .mod_quiz-edit-top-controls .btn-toolbar .selectmultiplecommandbuttons {
+    margin-bottom: 15px !important;
+}
+
+/* --- FIX LỖI JS KHI ẤN NÚT BÚT CHÌ (QUAN TRỌNG) --- */
+/* Bắt buộc phải thêm đoạn này để Moodle JS nhận diện được vị trí chèn ô input */
+
+/* 1. Trả container chính về dạng block truyền thống để tránh lỗi tính toán tọa độ của JS */
+#page-mod-quiz-edit .section-heading {
+    display: block !important;
+    width: 100% !important;
+    padding-bottom: 15px !important;
+    margin-bottom: 20px !important;
+    border-bottom: 1px solid #e0e0e0 !important; /* Giữ đường kẻ mờ thẩm mỹ */
+    position: relative !important;
+}
+
+/* 2. Container chứa Tiêu đề và Nút bút chì phải là inline-block */
+#page-mod-quiz-edit .instancesectioncontainer {
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* 3. Tiêu đề (H3) phải hiển thị inline để nằm ngang hàng với bút chì */
+#page-mod-quiz-edit .instancesectioncontainer h3,
+#page-mod-quiz-edit .instancesectioncontainer h4 {
+    display: inline-block !important;
+    margin: 0 10px 0 0 !important; /* Cách bút chì 10px */
+    font-size: 1.25rem !important;
+    color: #333 !important;
+    vertical-align: middle !important;
+}
+
+/* 4. Đảm bảo nút bút chì hiển thị đúng và không bị Flexbox làm méo */
+#page-mod-quiz-edit .editing_section {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    float: none !important; /* Tắt float nếu theme gốc có dùng */
+}
+
+/* 5. Đẩy phần nút Shuffle (Trộn câu hỏi) sang bên phải hoặc nằm gọn gàng */
+#page-mod-quiz-edit .instanceshufflequestions {
+    display: inline-block !important;
+    margin-left: 20px !important;
+    vertical-align: middle !important;
+    float: right !important; /* Đẩy sang phải cho đẹp */
+}
+
+/* 6. Fix lỗi trên Mobile: Khi màn hình nhỏ thì Shuffle xuống dòng */
+@media (max-width: 768px) {
+    #page-mod-quiz-edit .instanceshufflequestions {
+        display: block !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+    }
 }

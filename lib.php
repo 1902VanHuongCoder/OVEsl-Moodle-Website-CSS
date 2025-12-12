@@ -67,6 +67,11 @@ function local_paul_to_global_css_before_standard_html_head()
         $links .= '<link rel="stylesheet" type="text/css" href="' . $CFG->wwwroot . '/local/paul_to_global_css/css/assign-grade.css">' . "\n";
     }
 
+    if ($PAGE->pagetype === 'admin-roles-assign') {
+        $links .= '<link rel="stylesheet" type="text/css" href="' . $CFG->wwwroot . '/local/paul_to_global_css/css/locally-assign-role.css">' . "\n";
+    }
+
+
     return $links;
 }
 
@@ -86,4 +91,9 @@ function local_paul_to_global_css_before_footer()
     $PAGE->requires->js('/local/paul_to_global_css/js/wrap-gradeparent.js');
     // Add JavaScript file to wrap gradingtable (luôn luôn import)
     $PAGE->requires->js('/local/paul_to_global_css/js/wrap-gradingtable.js');
+    
+    // Only load local-assign-role.js on admin roles assign page
+    if ($PAGE->pagetype === 'admin-roles-assign') {
+        $PAGE->requires->js('/local/paul_to_global_css/js/local-assign-role.js');
+    }
 }

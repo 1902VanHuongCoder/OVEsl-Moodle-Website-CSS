@@ -1,0 +1,325 @@
+.main_content_container .col-lg-12 > h2 {
+  font-size: 26px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+}
+
+.main_content_container .col-lg-12 .page-section-title-hide {
+  font-size: 16px !important;
+  border-left: 4px solid #009688 !important;
+}
+
+/* --- TỔNG THỂ BẢNG --- */
+/* Xóa style cũ và tạo khung nền trắng hiện đại */
+#assignrole {
+  width: 70% !important;
+  border-collapse: separate; /* Để bo góc hoạt động */
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 12px; /* Bo tròn góc bảng */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ tạo độ nổi */
+  overflow: hidden; /* Ẩn phần thừa khi bo góc */
+  margin-bottom: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
+    sans-serif;
+}
+
+/* --- PHẦN TIÊU ĐỀ (HEADER) --- */
+#assignrole thead th {
+  background-color: #f8f9fa; /* Màu nền xám nhẹ */
+  color: #495057; /* Màu chữ xám đậm */
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 18px 15px;
+  border-bottom: 2px solid #e9ecef;
+  letter-spacing: 0.5px;
+}
+
+/* --- CÁC HÀNG VÀ Ô (ROWS & CELLS) --- */
+#assignrole tbody tr {
+  transition: all 0.2s ease; /* Hiệu ứng mượt khi di chuột */
+}
+
+#assignrole tbody td {
+  padding: 16px 15px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f3f5;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Link vai trò (Role) - Cột 1 */
+#assignrole td.c0 a {
+  color: #0f6cbf; /* Màu xanh Moodle chuẩn */
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Số lượng user (Count) - Cột 3 */
+#assignrole td.c2 {
+  font-weight: bold;
+  color: #666;
+  width: 50px; /* Cố định chiều rộng cho đẹp */
+  text-align: center;
+}
+
+/* Tên user (User list) - Cột 4 */
+#assignrole td.lastcol a {
+  display: inline-block;
+  background: #eef2f5;
+  padding: 4px 10px;
+  border-radius: 20px; /* Bo tròn kiểu thẻ chip */
+  color: #444;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 2px;
+}
+
+#assignrole td.lastcol a:hover {
+  background: #dfe6ed;
+  color: #000;
+}
+
+#assignrole tbody tr:hover {
+  background-color: none !important;
+}
+
+/* --- RESPONSIVE (GIAO DIỆN ĐIỆN THOẠI) --- */
+/* Khi màn hình nhỏ hơn 768px, chuyển bảng thành dạng thẻ (Cards) */
+@media screen and (max-width: 768px) {
+  #assignrole {
+    width: 100% !important;
+  }
+
+  #assignrole tbody tr:hover {
+    background-color: none !important;
+  }
+
+  #assignrole thead {
+    display: none; /* Ẩn tiêu đề bảng */
+  }
+
+  #assignrole tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background: #fff;
+  }
+
+  #assignrole tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 12px 15px;
+    text-align: right;
+  }
+
+  #assignrole tbody td:last-child {
+    border-bottom: none;
+  }
+
+  /* Tạo nhãn giả lập cho từng dòng trên mobile */
+  #assignrole tbody td.c0::before {
+    content: "Role:";
+    font-weight: bold;
+    color: #999;
+  }
+  #assignrole tbody td.c1::before {
+    content: "Desc:";
+    font-weight: bold;
+    color: #999;
+    display: none;
+  } /* Ẩn mô tả nếu trống */
+  #assignrole tbody td.c2::before {
+    content: "Quantity:";
+    font-weight: bold;
+    color: #999;
+  }
+  #assignrole tbody td.c3::before {
+    content: "Users:";
+    font-weight: bold;
+    color: #999;
+  }
+
+  /* Ẩn cột mô tả nếu nó trống (thường cột c1 hay trống) */
+  #assignrole tbody td.c1:empty {
+    display: none;
+  }
+}
+
+/* --- 1. SAFE MODERN STYLING (Desktop) --- */
+/* We do NOT change the table layout here to prevent breaking the grid */
+
+/* Style the Selection Boxes (The Lists) */
+#assigningrole select {
+  min-height: 300px; /* Taller for better visibility */
+  padding: 12px;
+  border: 1px solid #d1d5db; /* Soft grey border */
+  border-radius: 8px; /* Modern rounded corners */
+  background-color: #fff;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03); /* Subtle inner shadow */
+  font-size: 0.95rem;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+#assigningrole select:focus {
+  border-color: #0f6cbf; /* Highlight blue when clicked */
+  outline: none;
+}
+
+/* Style the Search Inputs */
+#assigningrole input[type="text"] {
+  padding: 10px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 50px; /* Pill shape for modern search look */
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't break width */
+  background-color: #f8f9fa;
+}
+
+#assigningrole input[type="text"]:focus {
+  background-color: #fff;
+  border-color: #0f6cbf;
+  box-shadow: 0 0 0 3px rgba(15, 108, 191, 0.1);
+}
+
+/* Style the Labels (Existing/Potential Users) */
+#assigningrole label {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #6c757d;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+/* Style the Buttons (Middle Column) */
+#assigningrole #buttonscell .btn {
+  width: 100%; /* Full width in the middle column */
+  margin-bottom: 8px;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-weight: 600;
+}
+
+#assigningrole:hover {
+  background-color: none !important;
+}
+
+#assigningrole tbody tr:hover {
+  background-color: none !important;
+}
+
+/* --- 2. RESPONSIVE MOBILE FIX (Stacking) --- */
+/* This only activates on screens smaller than 991px (Tablets/Phones) */
+@media screen and (max-width: 991px) {
+  /* Force table cells to behave like block elements (Stack vertically) */
+  #assigningrole td {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 0 20px 0 !important; /* Add space between stacks */
+    border: none !important;
+  }
+
+  /* Fix the Buttons area on mobile */
+  #assigningrole #buttonscell {
+    display: flex;
+    flex-direction: row; /* Make buttons sit side-by-side */
+    justify-content: center; /* Center them */
+    gap: 15px;
+    background-color: transparent;
+  }
+
+  #assigningrole #buttonscell .btn {
+    width: auto; /* Let buttons be natural size */
+    padding: 10px 25px;
+  }
+
+  /* Hide the <br> tags Moodle puts in the middle cell */
+  #assigningrole #buttonscell br {
+    display: none;
+  }
+
+  /* Ensure the search box doesn't overflow on small screens */
+  #assigningrole .userselector {
+    width: 100% !important;
+  }
+
+  .path-admin .roleassigntable #buttonscell #addcontrols {
+    margin-top: 0 !important;
+  }
+  .path-admin .roleassigntable #buttonscell #removecontrols {
+    text-align: center !important;
+  }
+}
+
+.path-admin .roleassigntable #existingcell,
+.path-admin .roleassigntable #potentialcell {
+  padding: 15px 10px !important;
+}
+
+.path-admin .roleassigntable optgroup:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.path-admin .roleassigntable #buttonscell #addcontrols {
+  margin-bottom: 10px !important;
+}
+
+.path-admin .roleassigntable #buttonscell #addcontrols .btn,
+.path-admin .roleassigntable #buttonscell #removecontrols .btn {
+  color: white !important;
+  background: #009688 !important;
+  border-radius: 50px !important;
+  opacity: 100% !important;
+}
+.path-admin .roleassigntable #buttonscell #addcontrols .btn:disabled,
+.path-admin .roleassigntable #buttonscell #removecontrols .btn:disabled {
+  opacity: 50% !important;
+}
+
+.path-admin .roleassigntable #potentialcell optgroup option:not(:last-child) {
+  margin-bottom: 8px;
+  cursor: pointer !important;
+}
+
+/* .path-admin .roleassigntable #potentialcell optgroup option {
+  padding-left: 10px !important;
+} */
+
+.path-admin .roleassigntable #potentialcell optgroup option:first-child {
+  margin-top: 10px !important;
+}
+
+.path-admin .roleassigntable #existingcell optgroup option:not(:last-child) {
+  margin-bottom: 8px;
+  cursor: pointer !important;
+}
+
+.path-admin .roleassigntable #existingcell optgroup option:first-child {
+  margin-top: 10px !important;
+}
+
+.path-admin .roleassigntable #existingcell .d-flex.flex-wrap,
+.path-admin .roleassigntable #potentialcell .d-flex.flex-wrap {
+  margin-top: 20px !important;
+  gap: 10px !important;
+}
+
+.path-admin
+  .roleassigntable
+  #existingcell
+  .d-flex.flex-wrap
+  input[type="button"],
+.path-admin
+  .roleassigntable
+  #potentialcell
+  .d-flex.flex-wrap
+  input[type="button"] {
+  margin: 0 !important;
+}

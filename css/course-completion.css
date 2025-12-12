@@ -20,3 +20,30 @@
     justify-content: end !important;
     gap: 10px !important;
 }
+
+/* Áp dụng cho màn hình điện thoại */
+@media (max-width: 768px) {
+    /* 1. Reset lại khung bao ngoài */
+    #page-navbar, .breadcrumb, nav[aria-label="breadcrumb"] {
+        height: auto !important;
+        overflow: visible !important;
+        display: flex !important;
+        flex-wrap: wrap !important; /* Cho phép rớt dòng */
+    }
+
+    /* 2. Ép chữ phải xuống dòng */
+    .breadcrumb-item {
+        display: inline-block !important; /* Đảm bảo nó hoạt động như khối văn bản */
+        white-space: normal !important; /* Cho phép xuống dòng bình thường */
+        word-break: break-word !important; /* CỰC QUAN TRỌNG: Bẻ gãy từ dài */
+        overflow-wrap: break-word !important; /* Hỗ trợ thêm các trình duyệt khác */
+        max-width: 100% !important;
+        font-size: 0.85rem !important; /* Giảm cỡ chữ chút cho gọn */
+    }
+    
+    /* 3. Xử lý thẻ link bên trong */
+    .breadcrumb-item a {
+        white-space: normal !important;
+        display: inline !important;
+    }
+}
