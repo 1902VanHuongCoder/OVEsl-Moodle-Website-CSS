@@ -71,6 +71,9 @@ function local_paul_to_global_css_before_standard_html_head()
         $links .= '<link rel="stylesheet" type="text/css" href="' . $CFG->wwwroot . '/local/paul_to_global_css/css/locally-assign-role.css">' . "\n";
     }
 
+    if ($PAGE->pagetype === 'mod-quiz-report') {
+        $links .= '<link rel="stylesheet" type="text/css" href="' . $CFG->wwwroot . '/local/paul_to_global_css/css/mod-quiz-report.css">' . "\n";
+    }
 
     return $links;
 }

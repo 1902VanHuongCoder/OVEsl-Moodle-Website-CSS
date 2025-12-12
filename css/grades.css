@@ -51,10 +51,10 @@
 
 /* Đẩy nút 3 chấm (Action menu) trong header cách ra 4px */
 .gradereport-grader-table th .action-menu,
-.gradereport-grader-table th .moodle-actionmenu {
+/* .gradereport-grader-table th .moodle-actionmenu {
     margin-left: 4px !important;
     display: inline-block;
-}
+} */
 
 /* Đẩy biểu tượng sắp xếp (Sort icon) trong header cách ra 4px */
 .gradereport-grader-table th .sorticon,

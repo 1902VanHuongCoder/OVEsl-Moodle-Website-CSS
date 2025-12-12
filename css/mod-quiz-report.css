@@ -1,0 +1,140 @@
+.quizattemptcounts {
+padding-bottom: 10px ;
+
+}
+
+/* ==========================================================================
+   INITIAL BAR (A-Z FILTER) STYLING
+   ========================================================================== */
+
+/* 1. Container chính */
+.initialbar {
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px; /* Khoảng cách giữa Label và các nút */
+}
+
+/* Label "First name" */
+.initialbar .initialbarlabel {
+    font-weight: 700;
+    color: #64748b;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+/* Reset margin của danh sách Bootstrap để các nút đều nhau */
+.initialbar .pagination {
+    margin: 0;
+    gap: 4px; /* Khoảng cách giữa các nút */
+}
+
+/* 2. Style chung cho các nút (Links) */
+.initialbar .page-item .page-link {
+    border-radius: 8px !important; /* Bo góc mềm mại (hoặc 50% nếu thích hình tròn) */
+    border: 1px solid #e2e8f0;     /* Viền nhẹ */
+    color: #475569;                /* Màu chữ xám đậm */
+    background-color: #fff;
+    width: 36px;                   /* Kích thước cố định vuông vức */
+    height: 36px;
+    padding: 0;                    /* Reset padding để căn giữa bằng flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    margin: 0 !important;          /* Xóa margin âm của bootstrap */
+    transition: all 0.2s ease;
+}
+
+/* Riêng nút "All" cần rộng hơn chút */
+.initialbar .initialbarall .page-link {
+    width: auto;
+    padding: 0 12px;
+    min-width: 40px;
+}
+
+/* 3. Hiệu ứng Hover & Active */
+.initialbar .page-item .page-link:hover {
+    background-color: #f1f5f9;
+    color: #009688;
+    border-color: #cbd5e1;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* Trạng thái đang chọn (Active) */
+.initialbar .page-item.active .page-link {
+    background-color: #009688 !important; /* Màu xanh chủ đạo */
+    border-color: #009688 !important;
+    color: #fff !important;
+    z-index: 1;
+}
+
+/* --- SỬA LỖI DÍNH NÚT (SPACING FIX) --- */
+
+/* 1. Xử lý khoảng cách giữa cụm "All" và cụm "A-Z" */
+.initialbar .initialbargroups {
+    gap: 8px !important; /* Tách rời 2 danh sách <ul> riêng biệt */
+}
+
+/* 2. Xử lý khoảng cách giữa từng ô chữ cái (bao gồm cả M và N khi xuống dòng) */
+.initialbar .pagination {
+    display: flex !important;
+    flex-wrap: wrap !important; /* Đảm bảo các nút được phép xuống dòng */
+    row-gap: 6px !important;        /* Tạo khe hở 6px cho cả hàng ngang và hàng dọc */
+    margin-bottom: 0 !important;
+}
+
+/* 3. Reset margin thừa của Bootstrap để gap hoạt động chính xác */
+.initialbar .page-item {
+    margin: 0 !important;
+}
+
+#page-mod-quiz-report .dataformatselector div{
+    margin-top: 35px;
+}
+
+/* 4. RESPONSIVE CHO MOBILE */
+@media (max-width: 767px) {
+    #page-mod-quiz-report .mform {
+        padding: 0px !important;
+    }
+    .initialbar {
+        flex-direction: column; /* Đưa Label lên trên cùng */
+        align-items: center;
+        padding: 10px;
+        background: #f8fafc;
+        border-radius: 12px;
+    }
+
+    .initialbar .initialbarlabel {
+        margin-right: 0;
+        margin-bottom: 8px;
+        font-size: 0.8rem;
+    }
+
+    .initialbar .initialbargroups {
+        justify-content: start !important; /* Căn giữa toàn bộ nút */
+        gap: 5px;
+    }
+    
+    .initialbar .pagination {
+        justify-content: start !important;
+        flex-wrap: wrap;
+    }
+
+    /* Tăng kích thước nút trên mobile để dễ bấm hơn */
+    .initialbar .page-item .page-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    #page-mod-quiz-report .dataformatselector div {
+        gap: 10px !important;
+    }
+
+    #page-mod-quiz-report #commands input:first-child {
+        margin-bottom: 10px !important;
+    }
+}
